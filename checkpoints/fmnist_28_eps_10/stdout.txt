@@ -1,0 +1,1175 @@
+INFO - main.py - 2025-03-17 23:53:50,454 - {'setup': {'runner': 'train_dpdm_base', 'n_gpus_per_node': 4, 'n_nodes': 1, 'node_rank': 0, 'master_address': '127.0.0.1', 'master_port': 6020, 'omp_n_threads': 64, 'workdir': '/cephyr/users/mircog/Vera/Fashion_MNIST_6917500', 'mode': 'train', 'root_folder': '.', 'local_rank': 0, 'global_rank': 0, 'global_size': 4}, 'data': {'path': None, 'name': 'fmnist_28', 'num_channels': 1, 'resolution': 28, 'n_classes': 10, 'fid_stats': ['assets/stats/fmnist_train.npz'], 'one_hot': False, 'dataloader_params': {'num_workers': 1, 'pin_memory': True}}, 'model': {'denoiser_name': 'edm', 'denoiser_network': 'song', 'ema_rate': 0.999, 'network': {'image_size': 28, 'attn_resolutions': [7]}}, 'optim': {'optimizer': 'Adam', 'params': {'lr': 0.0003, 'weight_decay': 0.0}}, 'sampler': {'type': 'ddim', 'stochastic': False, 'num_steps': 50, 'tmin': 0.002, 'tmax': 80.0, 'rho': 7.0, 'guid_scale': 0.0, 'snapshot_batch_size': 64, 'fid_batch_size': 64}, 'train': {'seed': 0, 'batch_size': 4096, 'n_epochs': 300, 'log_freq': 100, 'snapshot_freq': 1000, 'snapshot_threshold': 1, 'save_freq': 100000, 'save_threshold': 1, 'fid_freq': 10000, 'fid_samples': 5000, 'fid_threshold': 1}, 'loss': {'version': 'edm', 'p_mean': -1.2, 'p_std': 1.2, 'n_noise_samples': 32, 'n_classes': 10}, 'dp': {'max_grad_norm': 1.0, 'delta': 1e-05, 'epsilon': 10.0, 'max_physical_batch_size': 8192, 'n_splits': 16}}
+INFO - train_dpdm_base.py - 2025-03-17 23:54:07,884 - Number of trainable parameters in model: 1753345
+INFO - train_dpdm_base.py - 2025-03-17 23:54:07,884 - Number of total epochs: 300
+INFO - train_dpdm_base.py - 2025-03-17 23:54:07,884 - Starting training at step 0
+INFO - train_dpdm_base.py - 2025-03-17 23:55:43,880 - Loss: 1.1735, step: 100
+INFO - train_dpdm_base.py - 2025-03-17 23:57:00,065 - Loss: 1.0412, step: 200
+INFO - train_dpdm_base.py - 2025-03-17 23:57:35,699 - Eps-value after 1 epochs: 0.5141
+INFO - train_dpdm_base.py - 2025-03-17 23:58:18,341 - Loss: 0.9845, step: 300
+INFO - train_dpdm_base.py - 2025-03-17 23:59:26,239 - Loss: 0.9461, step: 400
+INFO - train_dpdm_base.py - 2025-03-18 00:00:18,008 - Eps-value after 2 epochs: 0.6978
+INFO - train_dpdm_base.py - 2025-03-18 00:00:33,451 - Loss: 0.9181, step: 500
+INFO - train_dpdm_base.py - 2025-03-18 00:01:39,620 - Loss: 0.8588, step: 600
+INFO - train_dpdm_base.py - 2025-03-18 00:02:46,554 - Loss: 0.8144, step: 700
+INFO - train_dpdm_base.py - 2025-03-18 00:02:59,633 - Eps-value after 3 epochs: 0.8435
+INFO - train_dpdm_base.py - 2025-03-18 00:03:52,583 - Loss: 0.7664, step: 800
+INFO - train_dpdm_base.py - 2025-03-18 00:04:58,669 - Loss: 0.7419, step: 900
+INFO - train_dpdm_base.py - 2025-03-18 00:05:38,400 - Eps-value after 4 epochs: 0.9690
+INFO - train_dpdm_base.py - 2025-03-18 00:06:04,632 - Loss: 0.6896, step: 1000
+INFO - train_dpdm_base.py - 2025-03-18 00:06:04,658 - Saving snapshot checkpoint and sampling single batch at iteration 1000.
+WARNING - image.py - 2025-03-18 00:06:05,455 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 00:07:17,781 - Loss: 0.6529, step: 1100
+INFO - train_dpdm_base.py - 2025-03-18 00:08:23,732 - Loss: 0.6260, step: 1200
+INFO - train_dpdm_base.py - 2025-03-18 00:08:24,202 - Eps-value after 5 epochs: 1.0803
+INFO - train_dpdm_base.py - 2025-03-18 00:09:32,549 - Loss: 0.5896, step: 1300
+INFO - train_dpdm_base.py - 2025-03-18 00:10:38,741 - Loss: 0.5626, step: 1400
+INFO - train_dpdm_base.py - 2025-03-18 00:11:05,249 - Eps-value after 6 epochs: 1.1824
+INFO - train_dpdm_base.py - 2025-03-18 00:11:47,106 - Loss: 0.5247, step: 1500
+INFO - train_dpdm_base.py - 2025-03-18 00:12:52,294 - Loss: 0.4983, step: 1600
+INFO - train_dpdm_base.py - 2025-03-18 00:13:45,822 - Eps-value after 7 epochs: 1.2781
+INFO - train_dpdm_base.py - 2025-03-18 00:13:59,064 - Loss: 0.5019, step: 1700
+INFO - train_dpdm_base.py - 2025-03-18 00:15:05,008 - Loss: 0.4963, step: 1800
+INFO - train_dpdm_base.py - 2025-03-18 00:16:11,353 - Loss: 0.4521, step: 1900
+INFO - train_dpdm_base.py - 2025-03-18 00:16:24,809 - Eps-value after 8 epochs: 1.3657
+INFO - train_dpdm_base.py - 2025-03-18 00:17:17,473 - Loss: 0.4364, step: 2000
+INFO - train_dpdm_base.py - 2025-03-18 00:17:17,490 - Saving snapshot checkpoint and sampling single batch at iteration 2000.
+WARNING - image.py - 2025-03-18 00:17:18,224 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 00:18:24,039 - Loss: 0.4519, step: 2100
+INFO - train_dpdm_base.py - 2025-03-18 00:19:03,481 - Eps-value after 9 epochs: 1.4503
+INFO - train_dpdm_base.py - 2025-03-18 00:19:29,967 - Loss: 0.4314, step: 2200
+INFO - train_dpdm_base.py - 2025-03-18 00:20:37,438 - Loss: 0.4233, step: 2300
+INFO - train_dpdm_base.py - 2025-03-18 00:21:45,495 - Loss: 0.4546, step: 2400
+INFO - train_dpdm_base.py - 2025-03-18 00:21:45,521 - Eps-value after 10 epochs: 1.5299
+INFO - train_dpdm_base.py - 2025-03-18 00:22:50,986 - Loss: 0.4036, step: 2500
+INFO - train_dpdm_base.py - 2025-03-18 00:23:56,461 - Loss: 0.3986, step: 2600
+INFO - train_dpdm_base.py - 2025-03-18 00:24:22,651 - Eps-value after 11 epochs: 1.6087
+INFO - train_dpdm_base.py - 2025-03-18 00:25:01,826 - Loss: 0.3869, step: 2700
+INFO - train_dpdm_base.py - 2025-03-18 00:26:06,966 - Loss: 0.3594, step: 2800
+INFO - train_dpdm_base.py - 2025-03-18 00:26:59,840 - Eps-value after 12 epochs: 1.6799
+INFO - train_dpdm_base.py - 2025-03-18 00:27:12,727 - Loss: 0.3649, step: 2900
+INFO - train_dpdm_base.py - 2025-03-18 00:28:17,559 - Loss: 0.3821, step: 3000
+INFO - train_dpdm_base.py - 2025-03-18 00:28:17,590 - Saving snapshot checkpoint and sampling single batch at iteration 3000.
+WARNING - image.py - 2025-03-18 00:28:18,332 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 00:29:28,406 - Loss: 0.3455, step: 3100
+INFO - train_dpdm_base.py - 2025-03-18 00:29:41,308 - Eps-value after 13 epochs: 1.7506
+INFO - train_dpdm_base.py - 2025-03-18 00:30:33,449 - Loss: 0.3848, step: 3200
+INFO - train_dpdm_base.py - 2025-03-18 00:31:41,176 - Loss: 0.3494, step: 3300
+INFO - train_dpdm_base.py - 2025-03-18 00:32:23,669 - Eps-value after 14 epochs: 1.8192
+INFO - train_dpdm_base.py - 2025-03-18 00:32:51,670 - Loss: 0.3386, step: 3400
+INFO - train_dpdm_base.py - 2025-03-18 00:33:56,764 - Loss: 0.3610, step: 3500
+INFO - train_dpdm_base.py - 2025-03-18 00:35:02,058 - Loss: 0.3455, step: 3600
+INFO - train_dpdm_base.py - 2025-03-18 00:35:02,083 - Eps-value after 15 epochs: 1.8857
+INFO - train_dpdm_base.py - 2025-03-18 00:36:07,852 - Loss: 0.3625, step: 3700
+INFO - train_dpdm_base.py - 2025-03-18 00:37:15,249 - Loss: 0.3470, step: 3800
+INFO - train_dpdm_base.py - 2025-03-18 00:37:41,204 - Eps-value after 16 epochs: 1.9502
+INFO - train_dpdm_base.py - 2025-03-18 00:38:20,134 - Loss: 0.3539, step: 3900
+INFO - train_dpdm_base.py - 2025-03-18 00:39:25,595 - Loss: 0.3149, step: 4000
+INFO - train_dpdm_base.py - 2025-03-18 00:39:25,608 - Saving snapshot checkpoint and sampling single batch at iteration 4000.
+WARNING - image.py - 2025-03-18 00:39:26,359 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 00:40:19,867 - Eps-value after 17 epochs: 2.0131
+INFO - train_dpdm_base.py - 2025-03-18 00:40:33,043 - Loss: 0.3483, step: 4100
+INFO - train_dpdm_base.py - 2025-03-18 00:41:39,020 - Loss: 0.3194, step: 4200
+INFO - train_dpdm_base.py - 2025-03-18 00:42:45,501 - Loss: 0.3083, step: 4300
+INFO - train_dpdm_base.py - 2025-03-18 00:42:58,782 - Eps-value after 18 epochs: 2.0743
+INFO - train_dpdm_base.py - 2025-03-18 00:43:51,079 - Loss: 0.3261, step: 4400
+INFO - train_dpdm_base.py - 2025-03-18 00:44:56,070 - Loss: 0.3180, step: 4500
+INFO - train_dpdm_base.py - 2025-03-18 00:45:35,505 - Eps-value after 19 epochs: 2.1341
+INFO - train_dpdm_base.py - 2025-03-18 00:46:02,001 - Loss: 0.3212, step: 4600
+INFO - train_dpdm_base.py - 2025-03-18 00:47:07,427 - Loss: 0.3143, step: 4700
+INFO - train_dpdm_base.py - 2025-03-18 00:48:13,094 - Loss: 0.3006, step: 4800
+INFO - train_dpdm_base.py - 2025-03-18 00:48:13,116 - Eps-value after 20 epochs: 2.1926
+INFO - train_dpdm_base.py - 2025-03-18 00:49:17,807 - Loss: 0.2977, step: 4900
+INFO - train_dpdm_base.py - 2025-03-18 00:50:26,026 - Loss: 0.2980, step: 5000
+INFO - train_dpdm_base.py - 2025-03-18 00:50:26,053 - Saving snapshot checkpoint and sampling single batch at iteration 5000.
+WARNING - image.py - 2025-03-18 00:50:26,790 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 00:50:53,818 - Eps-value after 21 epochs: 2.2498
+INFO - train_dpdm_base.py - 2025-03-18 00:51:33,219 - Loss: 0.3274, step: 5100
+INFO - train_dpdm_base.py - 2025-03-18 00:52:38,093 - Loss: 0.3036, step: 5200
+INFO - train_dpdm_base.py - 2025-03-18 00:53:29,335 - Eps-value after 22 epochs: 2.3059
+INFO - train_dpdm_base.py - 2025-03-18 00:53:42,386 - Loss: 0.3109, step: 5300
+INFO - train_dpdm_base.py - 2025-03-18 00:54:49,283 - Loss: 0.3179, step: 5400
+INFO - train_dpdm_base.py - 2025-03-18 00:55:55,308 - Loss: 0.2944, step: 5500
+INFO - train_dpdm_base.py - 2025-03-18 00:56:08,579 - Eps-value after 23 epochs: 2.3608
+INFO - train_dpdm_base.py - 2025-03-18 00:57:01,281 - Loss: 0.3083, step: 5600
+INFO - train_dpdm_base.py - 2025-03-18 00:58:05,858 - Loss: 0.3034, step: 5700
+INFO - train_dpdm_base.py - 2025-03-18 00:58:44,396 - Eps-value after 24 epochs: 2.4148
+INFO - train_dpdm_base.py - 2025-03-18 00:59:10,799 - Loss: 0.3225, step: 5800
+INFO - train_dpdm_base.py - 2025-03-18 01:00:16,720 - Loss: 0.3056, step: 5900
+INFO - train_dpdm_base.py - 2025-03-18 01:01:22,260 - Loss: 0.2936, step: 6000
+INFO - train_dpdm_base.py - 2025-03-18 01:01:22,281 - Eps-value after 25 epochs: 2.4678
+INFO - train_dpdm_base.py - 2025-03-18 01:01:22,315 - Saving snapshot checkpoint and sampling single batch at iteration 6000.
+WARNING - image.py - 2025-03-18 01:01:23,037 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 01:02:29,686 - Loss: 0.2850, step: 6100
+INFO - train_dpdm_base.py - 2025-03-18 01:03:34,727 - Loss: 0.3006, step: 6200
+INFO - train_dpdm_base.py - 2025-03-18 01:04:03,742 - Eps-value after 26 epochs: 2.5199
+INFO - train_dpdm_base.py - 2025-03-18 01:04:42,851 - Loss: 0.2977, step: 6300
+INFO - train_dpdm_base.py - 2025-03-18 01:05:48,595 - Loss: 0.2814, step: 6400
+INFO - train_dpdm_base.py - 2025-03-18 01:06:41,233 - Eps-value after 27 epochs: 2.5712
+INFO - train_dpdm_base.py - 2025-03-18 01:06:54,596 - Loss: 0.2906, step: 6500
+INFO - train_dpdm_base.py - 2025-03-18 01:08:01,576 - Loss: 0.3152, step: 6600
+INFO - train_dpdm_base.py - 2025-03-18 01:09:07,719 - Loss: 0.2906, step: 6700
+INFO - train_dpdm_base.py - 2025-03-18 01:09:20,935 - Eps-value after 28 epochs: 2.6217
+INFO - train_dpdm_base.py - 2025-03-18 01:10:14,559 - Loss: 0.2809, step: 6800
+INFO - train_dpdm_base.py - 2025-03-18 01:11:19,706 - Loss: 0.2996, step: 6900
+INFO - train_dpdm_base.py - 2025-03-18 01:11:58,915 - Eps-value after 29 epochs: 2.6714
+INFO - train_dpdm_base.py - 2025-03-18 01:12:25,065 - Loss: 0.2949, step: 7000
+INFO - train_dpdm_base.py - 2025-03-18 01:12:25,100 - Saving snapshot checkpoint and sampling single batch at iteration 7000.
+WARNING - image.py - 2025-03-18 01:12:25,945 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 01:13:31,434 - Loss: 0.2705, step: 7100
+INFO - train_dpdm_base.py - 2025-03-18 01:14:36,832 - Loss: 0.3017, step: 7200
+INFO - train_dpdm_base.py - 2025-03-18 01:14:36,858 - Eps-value after 30 epochs: 2.7204
+INFO - train_dpdm_base.py - 2025-03-18 01:15:41,829 - Loss: 0.2866, step: 7300
+INFO - train_dpdm_base.py - 2025-03-18 01:16:50,751 - Loss: 0.2962, step: 7400
+INFO - train_dpdm_base.py - 2025-03-18 01:17:16,938 - Eps-value after 31 epochs: 2.7688
+INFO - train_dpdm_base.py - 2025-03-18 01:17:55,982 - Loss: 0.2672, step: 7500
+INFO - train_dpdm_base.py - 2025-03-18 01:19:02,944 - Loss: 0.2701, step: 7600
+INFO - train_dpdm_base.py - 2025-03-18 01:19:55,077 - Eps-value after 32 epochs: 2.8164
+INFO - train_dpdm_base.py - 2025-03-18 01:20:08,408 - Loss: 0.2748, step: 7700
+INFO - train_dpdm_base.py - 2025-03-18 01:21:14,510 - Loss: 0.2943, step: 7800
+INFO - train_dpdm_base.py - 2025-03-18 01:22:18,896 - Loss: 0.2789, step: 7900
+INFO - train_dpdm_base.py - 2025-03-18 01:22:32,211 - Eps-value after 33 epochs: 2.8634
+INFO - train_dpdm_base.py - 2025-03-18 01:23:24,983 - Loss: 0.2802, step: 8000
+INFO - train_dpdm_base.py - 2025-03-18 01:23:24,995 - Saving snapshot checkpoint and sampling single batch at iteration 8000.
+WARNING - image.py - 2025-03-18 01:23:25,702 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 01:24:31,512 - Loss: 0.2922, step: 8100
+INFO - train_dpdm_base.py - 2025-03-18 01:25:11,523 - Eps-value after 34 epochs: 2.9099
+INFO - train_dpdm_base.py - 2025-03-18 01:25:38,256 - Loss: 0.2746, step: 8200
+INFO - train_dpdm_base.py - 2025-03-18 01:26:43,214 - Loss: 0.2937, step: 8300
+INFO - train_dpdm_base.py - 2025-03-18 01:27:48,140 - Loss: 0.2554, step: 8400
+INFO - train_dpdm_base.py - 2025-03-18 01:27:48,325 - Eps-value after 35 epochs: 2.9558
+INFO - train_dpdm_base.py - 2025-03-18 01:28:53,689 - Loss: 0.2855, step: 8500
+INFO - train_dpdm_base.py - 2025-03-18 01:29:59,988 - Loss: 0.2818, step: 8600
+INFO - train_dpdm_base.py - 2025-03-18 01:30:26,262 - Eps-value after 36 epochs: 3.0012
+INFO - train_dpdm_base.py - 2025-03-18 01:31:05,520 - Loss: 0.2806, step: 8700
+INFO - train_dpdm_base.py - 2025-03-18 01:32:10,914 - Loss: 0.2627, step: 8800
+INFO - train_dpdm_base.py - 2025-03-18 01:33:03,620 - Eps-value after 37 epochs: 3.0459
+INFO - train_dpdm_base.py - 2025-03-18 01:33:17,153 - Loss: 0.2899, step: 8900
+INFO - train_dpdm_base.py - 2025-03-18 01:34:22,352 - Loss: 0.2701, step: 9000
+INFO - train_dpdm_base.py - 2025-03-18 01:34:22,686 - Saving snapshot checkpoint and sampling single batch at iteration 9000.
+WARNING - image.py - 2025-03-18 01:34:23,430 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 01:35:29,796 - Loss: 0.2786, step: 9100
+INFO - train_dpdm_base.py - 2025-03-18 01:35:42,922 - Eps-value after 38 epochs: 3.0902
+INFO - train_dpdm_base.py - 2025-03-18 01:36:35,611 - Loss: 0.3030, step: 9200
+INFO - train_dpdm_base.py - 2025-03-18 01:37:41,394 - Loss: 0.2721, step: 9300
+INFO - train_dpdm_base.py - 2025-03-18 01:38:21,258 - Eps-value after 39 epochs: 3.1341
+INFO - train_dpdm_base.py - 2025-03-18 01:38:47,773 - Loss: 0.2918, step: 9400
+INFO - train_dpdm_base.py - 2025-03-18 01:39:54,012 - Loss: 0.2689, step: 9500
+INFO - train_dpdm_base.py - 2025-03-18 01:40:59,311 - Loss: 0.2856, step: 9600
+INFO - train_dpdm_base.py - 2025-03-18 01:40:59,331 - Eps-value after 40 epochs: 3.1775
+INFO - train_dpdm_base.py - 2025-03-18 01:42:05,562 - Loss: 0.2646, step: 9700
+INFO - train_dpdm_base.py - 2025-03-18 01:43:10,974 - Loss: 0.2854, step: 9800
+INFO - train_dpdm_base.py - 2025-03-18 01:43:37,251 - Eps-value after 41 epochs: 3.2203
+INFO - train_dpdm_base.py - 2025-03-18 01:44:16,220 - Loss: 0.2726, step: 9900
+INFO - train_dpdm_base.py - 2025-03-18 01:45:22,410 - Loss: 0.2853, step: 10000
+INFO - train_dpdm_base.py - 2025-03-18 01:45:22,426 - Saving snapshot checkpoint and sampling single batch at iteration 10000.
+WARNING - image.py - 2025-03-18 01:45:23,124 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 01:45:50,550 - FID 0 at iteration 10000: 46.584098
+INFO - train_dpdm_base.py - 2025-03-18 01:46:43,192 - Eps-value after 42 epochs: 3.2628
+INFO - train_dpdm_base.py - 2025-03-18 01:46:56,216 - Loss: 0.2782, step: 10100
+INFO - train_dpdm_base.py - 2025-03-18 01:48:02,186 - Loss: 0.2713, step: 10200
+INFO - train_dpdm_base.py - 2025-03-18 01:49:07,923 - Loss: 0.2843, step: 10300
+INFO - train_dpdm_base.py - 2025-03-18 01:49:21,242 - Eps-value after 43 epochs: 3.3049
+INFO - train_dpdm_base.py - 2025-03-18 01:50:13,988 - Loss: 0.2703, step: 10400
+INFO - train_dpdm_base.py - 2025-03-18 01:51:20,127 - Loss: 0.2651, step: 10500
+INFO - train_dpdm_base.py - 2025-03-18 01:51:59,784 - Eps-value after 44 epochs: 3.3465
+INFO - train_dpdm_base.py - 2025-03-18 01:52:25,853 - Loss: 0.2704, step: 10600
+INFO - train_dpdm_base.py - 2025-03-18 01:53:31,631 - Loss: 0.2562, step: 10700
+INFO - train_dpdm_base.py - 2025-03-18 01:54:37,095 - Loss: 0.2758, step: 10800
+INFO - train_dpdm_base.py - 2025-03-18 01:54:37,122 - Eps-value after 45 epochs: 3.3879
+INFO - train_dpdm_base.py - 2025-03-18 01:55:43,023 - Loss: 0.2743, step: 10900
+INFO - train_dpdm_base.py - 2025-03-18 01:56:49,650 - Loss: 0.2577, step: 11000
+INFO - train_dpdm_base.py - 2025-03-18 01:56:49,857 - Saving snapshot checkpoint and sampling single batch at iteration 11000.
+WARNING - image.py - 2025-03-18 01:56:50,603 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 01:57:17,132 - Eps-value after 46 epochs: 3.4287
+INFO - train_dpdm_base.py - 2025-03-18 01:57:56,818 - Loss: 0.2617, step: 11100
+INFO - train_dpdm_base.py - 2025-03-18 01:59:02,635 - Loss: 0.2758, step: 11200
+INFO - train_dpdm_base.py - 2025-03-18 01:59:55,496 - Eps-value after 47 epochs: 3.4693
+INFO - train_dpdm_base.py - 2025-03-18 02:00:08,544 - Loss: 0.2676, step: 11300
+INFO - train_dpdm_base.py - 2025-03-18 02:01:13,765 - Loss: 0.2617, step: 11400
+INFO - train_dpdm_base.py - 2025-03-18 02:02:18,613 - Loss: 0.2719, step: 11500
+INFO - train_dpdm_base.py - 2025-03-18 02:02:31,697 - Eps-value after 48 epochs: 3.5094
+INFO - train_dpdm_base.py - 2025-03-18 02:03:24,927 - Loss: 0.2478, step: 11600
+INFO - train_dpdm_base.py - 2025-03-18 02:04:30,367 - Loss: 0.2544, step: 11700
+INFO - train_dpdm_base.py - 2025-03-18 02:05:10,881 - Eps-value after 49 epochs: 3.5494
+INFO - train_dpdm_base.py - 2025-03-18 02:05:37,161 - Loss: 0.2959, step: 11800
+INFO - train_dpdm_base.py - 2025-03-18 02:06:42,553 - Loss: 0.2686, step: 11900
+INFO - train_dpdm_base.py - 2025-03-18 02:07:48,822 - Loss: 0.2735, step: 12000
+INFO - train_dpdm_base.py - 2025-03-18 02:07:48,842 - Eps-value after 50 epochs: 3.5888
+INFO - train_dpdm_base.py - 2025-03-18 02:07:48,864 - Saving snapshot checkpoint and sampling single batch at iteration 12000.
+WARNING - image.py - 2025-03-18 02:07:49,595 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 02:08:54,332 - Loss: 0.2800, step: 12100
+INFO - train_dpdm_base.py - 2025-03-18 02:09:59,821 - Loss: 0.2606, step: 12200
+INFO - train_dpdm_base.py - 2025-03-18 02:10:26,081 - Eps-value after 51 epochs: 3.6281
+INFO - train_dpdm_base.py - 2025-03-18 02:11:05,488 - Loss: 0.2945, step: 12300
+INFO - train_dpdm_base.py - 2025-03-18 02:12:11,765 - Loss: 0.2708, step: 12400
+INFO - train_dpdm_base.py - 2025-03-18 02:13:04,182 - Eps-value after 52 epochs: 3.6668
+INFO - train_dpdm_base.py - 2025-03-18 02:13:16,670 - Loss: 0.2705, step: 12500
+INFO - train_dpdm_base.py - 2025-03-18 02:14:22,141 - Loss: 0.2682, step: 12600
+INFO - train_dpdm_base.py - 2025-03-18 02:15:27,701 - Loss: 0.2372, step: 12700
+INFO - train_dpdm_base.py - 2025-03-18 02:15:40,799 - Eps-value after 53 epochs: 3.7056
+INFO - train_dpdm_base.py - 2025-03-18 02:16:33,372 - Loss: 0.2410, step: 12800
+INFO - train_dpdm_base.py - 2025-03-18 02:17:38,901 - Loss: 0.2685, step: 12900
+INFO - train_dpdm_base.py - 2025-03-18 02:18:18,761 - Eps-value after 54 epochs: 3.7437
+INFO - train_dpdm_base.py - 2025-03-18 02:18:44,888 - Loss: 0.2506, step: 13000
+INFO - train_dpdm_base.py - 2025-03-18 02:18:44,921 - Saving snapshot checkpoint and sampling single batch at iteration 13000.
+WARNING - image.py - 2025-03-18 02:18:45,638 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 02:19:52,184 - Loss: 0.2511, step: 13100
+INFO - train_dpdm_base.py - 2025-03-18 02:20:57,406 - Loss: 0.2400, step: 13200
+INFO - train_dpdm_base.py - 2025-03-18 02:20:57,432 - Eps-value after 55 epochs: 3.7817
+INFO - train_dpdm_base.py - 2025-03-18 02:22:03,886 - Loss: 0.2646, step: 13300
+INFO - train_dpdm_base.py - 2025-03-18 02:23:09,519 - Loss: 0.2518, step: 13400
+INFO - train_dpdm_base.py - 2025-03-18 02:23:35,939 - Eps-value after 56 epochs: 3.8194
+INFO - train_dpdm_base.py - 2025-03-18 02:24:15,689 - Loss: 0.2484, step: 13500
+INFO - train_dpdm_base.py - 2025-03-18 02:25:21,131 - Loss: 0.2649, step: 13600
+INFO - train_dpdm_base.py - 2025-03-18 02:26:12,777 - Eps-value after 57 epochs: 3.8568
+INFO - train_dpdm_base.py - 2025-03-18 02:26:25,460 - Loss: 0.2501, step: 13700
+INFO - train_dpdm_base.py - 2025-03-18 02:27:31,895 - Loss: 0.2683, step: 13800
+INFO - train_dpdm_base.py - 2025-03-18 02:28:37,660 - Loss: 0.2500, step: 13900
+INFO - train_dpdm_base.py - 2025-03-18 02:28:50,877 - Eps-value after 58 epochs: 3.8941
+INFO - train_dpdm_base.py - 2025-03-18 02:29:43,113 - Loss: 0.2483, step: 14000
+INFO - train_dpdm_base.py - 2025-03-18 02:29:43,128 - Saving snapshot checkpoint and sampling single batch at iteration 14000.
+WARNING - image.py - 2025-03-18 02:29:43,829 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 02:30:49,807 - Loss: 0.2631, step: 14100
+INFO - train_dpdm_base.py - 2025-03-18 02:31:28,582 - Eps-value after 59 epochs: 3.9309
+INFO - train_dpdm_base.py - 2025-03-18 02:31:54,729 - Loss: 0.2511, step: 14200
+INFO - train_dpdm_base.py - 2025-03-18 02:33:00,431 - Loss: 0.2715, step: 14300
+INFO - train_dpdm_base.py - 2025-03-18 02:34:06,926 - Loss: 0.2487, step: 14400
+INFO - train_dpdm_base.py - 2025-03-18 02:34:06,952 - Eps-value after 60 epochs: 3.9676
+INFO - train_dpdm_base.py - 2025-03-18 02:35:13,193 - Loss: 0.2355, step: 14500
+INFO - train_dpdm_base.py - 2025-03-18 02:36:18,719 - Loss: 0.2562, step: 14600
+INFO - train_dpdm_base.py - 2025-03-18 02:36:44,850 - Eps-value after 61 epochs: 4.0040
+INFO - train_dpdm_base.py - 2025-03-18 02:37:24,875 - Loss: 0.2474, step: 14700
+INFO - train_dpdm_base.py - 2025-03-18 02:38:30,983 - Loss: 0.2444, step: 14800
+INFO - train_dpdm_base.py - 2025-03-18 02:39:22,939 - Eps-value after 62 epochs: 4.0401
+INFO - train_dpdm_base.py - 2025-03-18 02:39:36,470 - Loss: 0.2883, step: 14900
+INFO - train_dpdm_base.py - 2025-03-18 02:40:41,958 - Loss: 0.2662, step: 15000
+INFO - train_dpdm_base.py - 2025-03-18 02:40:42,129 - Saving snapshot checkpoint and sampling single batch at iteration 15000.
+WARNING - image.py - 2025-03-18 02:40:42,849 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 02:41:48,613 - Loss: 0.2734, step: 15100
+INFO - train_dpdm_base.py - 2025-03-18 02:42:01,743 - Eps-value after 63 epochs: 4.0762
+INFO - train_dpdm_base.py - 2025-03-18 02:42:54,521 - Loss: 0.2622, step: 15200
+INFO - train_dpdm_base.py - 2025-03-18 02:44:00,261 - Loss: 0.2446, step: 15300
+INFO - train_dpdm_base.py - 2025-03-18 02:44:40,231 - Eps-value after 64 epochs: 4.1118
+INFO - train_dpdm_base.py - 2025-03-18 02:45:06,506 - Loss: 0.2564, step: 15400
+INFO - train_dpdm_base.py - 2025-03-18 02:46:12,842 - Loss: 0.2472, step: 15500
+INFO - train_dpdm_base.py - 2025-03-18 02:47:17,736 - Loss: 0.2601, step: 15600
+INFO - train_dpdm_base.py - 2025-03-18 02:47:17,757 - Eps-value after 65 epochs: 4.1472
+INFO - train_dpdm_base.py - 2025-03-18 02:48:23,951 - Loss: 0.2450, step: 15700
+INFO - train_dpdm_base.py - 2025-03-18 02:49:30,635 - Loss: 0.2496, step: 15800
+INFO - train_dpdm_base.py - 2025-03-18 02:49:56,805 - Eps-value after 66 epochs: 4.1827
+INFO - train_dpdm_base.py - 2025-03-18 02:50:35,299 - Loss: 0.2346, step: 15900
+INFO - train_dpdm_base.py - 2025-03-18 02:51:40,350 - Loss: 0.2481, step: 16000
+INFO - train_dpdm_base.py - 2025-03-18 02:51:40,367 - Saving snapshot checkpoint and sampling single batch at iteration 16000.
+WARNING - image.py - 2025-03-18 02:51:41,090 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 02:52:33,647 - Eps-value after 67 epochs: 4.2176
+INFO - train_dpdm_base.py - 2025-03-18 02:52:46,880 - Loss: 0.2563, step: 16100
+INFO - train_dpdm_base.py - 2025-03-18 02:53:52,606 - Loss: 0.2431, step: 16200
+INFO - train_dpdm_base.py - 2025-03-18 02:54:58,915 - Loss: 0.2418, step: 16300
+INFO - train_dpdm_base.py - 2025-03-18 02:55:12,159 - Eps-value after 68 epochs: 4.2524
+INFO - train_dpdm_base.py - 2025-03-18 02:56:04,485 - Loss: 0.2536, step: 16400
+INFO - train_dpdm_base.py - 2025-03-18 02:57:09,909 - Loss: 0.2638, step: 16500
+INFO - train_dpdm_base.py - 2025-03-18 02:57:48,823 - Eps-value after 69 epochs: 4.2872
+INFO - train_dpdm_base.py - 2025-03-18 02:58:14,699 - Loss: 0.2420, step: 16600
+INFO - train_dpdm_base.py - 2025-03-18 02:59:20,373 - Loss: 0.2675, step: 16700
+INFO - train_dpdm_base.py - 2025-03-18 03:00:27,208 - Loss: 0.2535, step: 16800
+INFO - train_dpdm_base.py - 2025-03-18 03:00:27,230 - Eps-value after 70 epochs: 4.3216
+INFO - train_dpdm_base.py - 2025-03-18 03:01:32,852 - Loss: 0.2442, step: 16900
+INFO - train_dpdm_base.py - 2025-03-18 03:02:38,015 - Loss: 0.2440, step: 17000
+INFO - train_dpdm_base.py - 2025-03-18 03:02:38,086 - Saving snapshot checkpoint and sampling single batch at iteration 17000.
+WARNING - image.py - 2025-03-18 03:02:38,806 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 03:03:05,376 - Eps-value after 71 epochs: 4.3557
+INFO - train_dpdm_base.py - 2025-03-18 03:03:44,697 - Loss: 0.2582, step: 17100
+INFO - train_dpdm_base.py - 2025-03-18 03:04:50,272 - Loss: 0.2651, step: 17200
+INFO - train_dpdm_base.py - 2025-03-18 03:05:43,157 - Eps-value after 72 epochs: 4.3899
+INFO - train_dpdm_base.py - 2025-03-18 03:05:56,451 - Loss: 0.2378, step: 17300
+INFO - train_dpdm_base.py - 2025-03-18 03:07:01,788 - Loss: 0.2639, step: 17400
+INFO - train_dpdm_base.py - 2025-03-18 03:08:07,414 - Loss: 0.2358, step: 17500
+INFO - train_dpdm_base.py - 2025-03-18 03:08:20,619 - Eps-value after 73 epochs: 4.4238
+INFO - train_dpdm_base.py - 2025-03-18 03:09:13,281 - Loss: 0.2481, step: 17600
+INFO - train_dpdm_base.py - 2025-03-18 03:10:20,123 - Loss: 0.2644, step: 17700
+INFO - train_dpdm_base.py - 2025-03-18 03:11:00,190 - Eps-value after 74 epochs: 4.4573
+INFO - train_dpdm_base.py - 2025-03-18 03:11:26,290 - Loss: 0.2525, step: 17800
+INFO - train_dpdm_base.py - 2025-03-18 03:12:31,027 - Loss: 0.2398, step: 17900
+INFO - train_dpdm_base.py - 2025-03-18 03:13:36,056 - Loss: 0.2438, step: 18000
+INFO - train_dpdm_base.py - 2025-03-18 03:13:36,081 - Eps-value after 75 epochs: 4.4908
+INFO - train_dpdm_base.py - 2025-03-18 03:13:36,111 - Saving snapshot checkpoint and sampling single batch at iteration 18000.
+WARNING - image.py - 2025-03-18 03:13:36,841 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 03:14:42,866 - Loss: 0.2334, step: 18100
+INFO - train_dpdm_base.py - 2025-03-18 03:15:49,026 - Loss: 0.2507, step: 18200
+INFO - train_dpdm_base.py - 2025-03-18 03:16:15,521 - Eps-value after 76 epochs: 4.5243
+INFO - train_dpdm_base.py - 2025-03-18 03:16:55,558 - Loss: 0.2533, step: 18300
+INFO - train_dpdm_base.py - 2025-03-18 03:18:01,065 - Loss: 0.2394, step: 18400
+INFO - train_dpdm_base.py - 2025-03-18 03:18:53,259 - Eps-value after 77 epochs: 4.5574
+INFO - train_dpdm_base.py - 2025-03-18 03:19:06,429 - Loss: 0.2470, step: 18500
+INFO - train_dpdm_base.py - 2025-03-18 03:20:12,013 - Loss: 0.2537, step: 18600
+INFO - train_dpdm_base.py - 2025-03-18 03:21:17,673 - Loss: 0.2457, step: 18700
+INFO - train_dpdm_base.py - 2025-03-18 03:21:31,157 - Eps-value after 78 epochs: 4.5902
+INFO - train_dpdm_base.py - 2025-03-18 03:22:23,549 - Loss: 0.2236, step: 18800
+INFO - train_dpdm_base.py - 2025-03-18 03:23:29,117 - Loss: 0.2414, step: 18900
+INFO - train_dpdm_base.py - 2025-03-18 03:24:08,664 - Eps-value after 79 epochs: 4.6231
+INFO - train_dpdm_base.py - 2025-03-18 03:24:35,007 - Loss: 0.2539, step: 19000
+INFO - train_dpdm_base.py - 2025-03-18 03:24:35,067 - Saving snapshot checkpoint and sampling single batch at iteration 19000.
+WARNING - image.py - 2025-03-18 03:24:35,802 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 03:25:41,935 - Loss: 0.2518, step: 19100
+INFO - train_dpdm_base.py - 2025-03-18 03:26:47,069 - Loss: 0.2317, step: 19200
+INFO - train_dpdm_base.py - 2025-03-18 03:26:47,091 - Eps-value after 80 epochs: 4.6559
+INFO - train_dpdm_base.py - 2025-03-18 03:27:53,393 - Loss: 0.2389, step: 19300
+INFO - train_dpdm_base.py - 2025-03-18 03:28:58,778 - Loss: 0.2457, step: 19400
+INFO - train_dpdm_base.py - 2025-03-18 03:29:25,424 - Eps-value after 81 epochs: 4.6883
+INFO - train_dpdm_base.py - 2025-03-18 03:30:04,853 - Loss: 0.2248, step: 19500
+INFO - train_dpdm_base.py - 2025-03-18 03:31:10,683 - Loss: 0.2442, step: 19600
+INFO - train_dpdm_base.py - 2025-03-18 03:32:02,656 - Eps-value after 82 epochs: 4.7205
+INFO - train_dpdm_base.py - 2025-03-18 03:32:15,633 - Loss: 0.2567, step: 19700
+INFO - train_dpdm_base.py - 2025-03-18 03:33:21,217 - Loss: 0.2464, step: 19800
+INFO - train_dpdm_base.py - 2025-03-18 03:34:27,326 - Loss: 0.2659, step: 19900
+INFO - train_dpdm_base.py - 2025-03-18 03:34:40,528 - Eps-value after 83 epochs: 4.7527
+INFO - train_dpdm_base.py - 2025-03-18 03:35:32,937 - Loss: 0.2573, step: 20000
+INFO - train_dpdm_base.py - 2025-03-18 03:35:32,948 - Saving snapshot checkpoint and sampling single batch at iteration 20000.
+WARNING - image.py - 2025-03-18 03:35:33,682 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 03:35:59,216 - FID 0 at iteration 20000: 32.875234
+INFO - train_dpdm_base.py - 2025-03-18 03:37:03,692 - Loss: 0.2243, step: 20100
+INFO - train_dpdm_base.py - 2025-03-18 03:37:43,441 - Eps-value after 84 epochs: 4.7849
+INFO - train_dpdm_base.py - 2025-03-18 03:38:09,991 - Loss: 0.2642, step: 20200
+INFO - train_dpdm_base.py - 2025-03-18 03:39:15,920 - Loss: 0.2581, step: 20300
+INFO - train_dpdm_base.py - 2025-03-18 03:40:21,312 - Loss: 0.2587, step: 20400
+INFO - train_dpdm_base.py - 2025-03-18 03:40:21,337 - Eps-value after 85 epochs: 4.8168
+INFO - train_dpdm_base.py - 2025-03-18 03:41:27,838 - Loss: 0.2536, step: 20500
+INFO - train_dpdm_base.py - 2025-03-18 03:42:33,690 - Loss: 0.2436, step: 20600
+INFO - train_dpdm_base.py - 2025-03-18 03:43:00,161 - Eps-value after 86 epochs: 4.8483
+INFO - train_dpdm_base.py - 2025-03-18 03:43:41,874 - Loss: 0.2554, step: 20700
+INFO - train_dpdm_base.py - 2025-03-18 03:44:48,837 - Loss: 0.2438, step: 20800
+INFO - train_dpdm_base.py - 2025-03-18 03:45:41,474 - Eps-value after 87 epochs: 4.8799
+INFO - train_dpdm_base.py - 2025-03-18 03:45:54,640 - Loss: 0.2395, step: 20900
+INFO - train_dpdm_base.py - 2025-03-18 03:47:00,166 - Loss: 0.2324, step: 21000
+INFO - train_dpdm_base.py - 2025-03-18 03:47:00,171 - Saving snapshot checkpoint and sampling single batch at iteration 21000.
+WARNING - image.py - 2025-03-18 03:47:00,909 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 03:48:07,233 - Loss: 0.2682, step: 21100
+INFO - train_dpdm_base.py - 2025-03-18 03:48:20,593 - Eps-value after 88 epochs: 4.9114
+INFO - train_dpdm_base.py - 2025-03-18 03:49:14,058 - Loss: 0.2216, step: 21200
+INFO - train_dpdm_base.py - 2025-03-18 03:50:19,771 - Loss: 0.2650, step: 21300
+INFO - train_dpdm_base.py - 2025-03-18 03:50:58,934 - Eps-value after 89 epochs: 4.9430
+INFO - train_dpdm_base.py - 2025-03-18 03:51:24,946 - Loss: 0.2249, step: 21400
+INFO - train_dpdm_base.py - 2025-03-18 03:52:31,025 - Loss: 0.2378, step: 21500
+INFO - train_dpdm_base.py - 2025-03-18 03:53:37,444 - Loss: 0.2328, step: 21600
+INFO - train_dpdm_base.py - 2025-03-18 03:53:37,596 - Eps-value after 90 epochs: 4.9739
+INFO - train_dpdm_base.py - 2025-03-18 03:54:42,855 - Loss: 0.2404, step: 21700
+INFO - train_dpdm_base.py - 2025-03-18 03:55:48,361 - Loss: 0.2434, step: 21800
+INFO - train_dpdm_base.py - 2025-03-18 03:56:14,441 - Eps-value after 91 epochs: 5.0048
+INFO - train_dpdm_base.py - 2025-03-18 03:56:53,581 - Loss: 0.2448, step: 21900
+INFO - train_dpdm_base.py - 2025-03-18 03:57:59,915 - Loss: 0.2293, step: 22000
+INFO - train_dpdm_base.py - 2025-03-18 03:57:59,931 - Saving snapshot checkpoint and sampling single batch at iteration 22000.
+WARNING - image.py - 2025-03-18 03:58:00,682 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 03:58:53,555 - Eps-value after 92 epochs: 5.0357
+INFO - train_dpdm_base.py - 2025-03-18 03:59:06,556 - Loss: 0.2366, step: 22100
+INFO - train_dpdm_base.py - 2025-03-18 04:00:12,537 - Loss: 0.2483, step: 22200
+INFO - train_dpdm_base.py - 2025-03-18 04:01:17,553 - Loss: 0.2470, step: 22300
+INFO - train_dpdm_base.py - 2025-03-18 04:01:30,567 - Eps-value after 93 epochs: 5.0666
+INFO - train_dpdm_base.py - 2025-03-18 04:02:22,023 - Loss: 0.2509, step: 22400
+INFO - train_dpdm_base.py - 2025-03-18 04:03:28,109 - Loss: 0.2321, step: 22500
+INFO - train_dpdm_base.py - 2025-03-18 04:04:07,751 - Eps-value after 94 epochs: 5.0974
+INFO - train_dpdm_base.py - 2025-03-18 04:04:33,715 - Loss: 0.2424, step: 22600
+INFO - train_dpdm_base.py - 2025-03-18 04:05:39,253 - Loss: 0.2664, step: 22700
+INFO - train_dpdm_base.py - 2025-03-18 04:06:45,244 - Loss: 0.2244, step: 22800
+INFO - train_dpdm_base.py - 2025-03-18 04:06:45,265 - Eps-value after 95 epochs: 5.1277
+INFO - train_dpdm_base.py - 2025-03-18 04:07:50,520 - Loss: 0.2308, step: 22900
+INFO - train_dpdm_base.py - 2025-03-18 04:08:57,065 - Loss: 0.2368, step: 23000
+INFO - train_dpdm_base.py - 2025-03-18 04:08:57,082 - Saving snapshot checkpoint and sampling single batch at iteration 23000.
+WARNING - image.py - 2025-03-18 04:08:57,799 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 04:09:24,388 - Eps-value after 96 epochs: 5.1579
+INFO - train_dpdm_base.py - 2025-03-18 04:10:04,034 - Loss: 0.2344, step: 23100
+INFO - train_dpdm_base.py - 2025-03-18 04:11:09,820 - Loss: 0.2580, step: 23200
+INFO - train_dpdm_base.py - 2025-03-18 04:12:02,473 - Eps-value after 97 epochs: 5.1882
+INFO - train_dpdm_base.py - 2025-03-18 04:12:15,386 - Loss: 0.2612, step: 23300
+INFO - train_dpdm_base.py - 2025-03-18 04:13:20,579 - Loss: 0.2196, step: 23400
+INFO - train_dpdm_base.py - 2025-03-18 04:14:27,002 - Loss: 0.2211, step: 23500
+INFO - train_dpdm_base.py - 2025-03-18 04:14:40,135 - Eps-value after 98 epochs: 5.2185
+INFO - train_dpdm_base.py - 2025-03-18 04:15:32,992 - Loss: 0.2486, step: 23600
+INFO - train_dpdm_base.py - 2025-03-18 04:16:38,908 - Loss: 0.2463, step: 23700
+INFO - train_dpdm_base.py - 2025-03-18 04:17:18,427 - Eps-value after 99 epochs: 5.2487
+INFO - train_dpdm_base.py - 2025-03-18 04:17:44,409 - Loss: 0.2411, step: 23800
+INFO - train_dpdm_base.py - 2025-03-18 04:18:50,875 - Loss: 0.2498, step: 23900
+INFO - train_dpdm_base.py - 2025-03-18 04:19:57,721 - Loss: 0.2592, step: 24000
+INFO - train_dpdm_base.py - 2025-03-18 04:19:57,748 - Eps-value after 100 epochs: 5.2784
+INFO - train_dpdm_base.py - 2025-03-18 04:19:57,769 - Saving snapshot checkpoint and sampling single batch at iteration 24000.
+WARNING - image.py - 2025-03-18 04:19:58,477 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 04:21:04,686 - Loss: 0.2347, step: 24100
+INFO - train_dpdm_base.py - 2025-03-18 04:22:10,697 - Loss: 0.2399, step: 24200
+INFO - train_dpdm_base.py - 2025-03-18 04:22:36,794 - Eps-value after 101 epochs: 5.3080
+INFO - train_dpdm_base.py - 2025-03-18 04:23:15,873 - Loss: 0.2665, step: 24300
+INFO - train_dpdm_base.py - 2025-03-18 04:24:22,331 - Loss: 0.2385, step: 24400
+INFO - train_dpdm_base.py - 2025-03-18 04:25:14,869 - Eps-value after 102 epochs: 5.3377
+INFO - train_dpdm_base.py - 2025-03-18 04:25:28,085 - Loss: 0.2426, step: 24500
+INFO - train_dpdm_base.py - 2025-03-18 04:26:33,054 - Loss: 0.2400, step: 24600
+INFO - train_dpdm_base.py - 2025-03-18 04:27:38,462 - Loss: 0.2553, step: 24700
+INFO - train_dpdm_base.py - 2025-03-18 04:27:51,617 - Eps-value after 103 epochs: 5.3673
+INFO - train_dpdm_base.py - 2025-03-18 04:28:43,931 - Loss: 0.2494, step: 24800
+INFO - train_dpdm_base.py - 2025-03-18 04:29:49,197 - Loss: 0.2380, step: 24900
+INFO - train_dpdm_base.py - 2025-03-18 04:30:29,997 - Eps-value after 104 epochs: 5.3969
+INFO - train_dpdm_base.py - 2025-03-18 04:30:56,004 - Loss: 0.2213, step: 25000
+INFO - train_dpdm_base.py - 2025-03-18 04:30:56,009 - Saving snapshot checkpoint and sampling single batch at iteration 25000.
+WARNING - image.py - 2025-03-18 04:30:56,714 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 04:32:01,529 - Loss: 0.2266, step: 25100
+INFO - train_dpdm_base.py - 2025-03-18 04:33:06,899 - Loss: 0.2462, step: 25200
+INFO - train_dpdm_base.py - 2025-03-18 04:33:06,926 - Eps-value after 105 epochs: 5.4264
+INFO - train_dpdm_base.py - 2025-03-18 04:34:12,275 - Loss: 0.2308, step: 25300
+INFO - train_dpdm_base.py - 2025-03-18 04:35:18,559 - Loss: 0.2469, step: 25400
+INFO - train_dpdm_base.py - 2025-03-18 04:35:45,359 - Eps-value after 106 epochs: 5.4554
+INFO - train_dpdm_base.py - 2025-03-18 04:36:24,173 - Loss: 0.2602, step: 25500
+INFO - train_dpdm_base.py - 2025-03-18 04:37:29,040 - Loss: 0.2412, step: 25600
+INFO - train_dpdm_base.py - 2025-03-18 04:38:21,975 - Eps-value after 107 epochs: 5.4844
+INFO - train_dpdm_base.py - 2025-03-18 04:38:35,070 - Loss: 0.2309, step: 25700
+INFO - train_dpdm_base.py - 2025-03-18 04:39:41,481 - Loss: 0.2386, step: 25800
+INFO - train_dpdm_base.py - 2025-03-18 04:40:46,613 - Loss: 0.2443, step: 25900
+INFO - train_dpdm_base.py - 2025-03-18 04:41:00,107 - Eps-value after 108 epochs: 5.5134
+INFO - train_dpdm_base.py - 2025-03-18 04:41:52,836 - Loss: 0.2523, step: 26000
+INFO - train_dpdm_base.py - 2025-03-18 04:41:52,854 - Saving snapshot checkpoint and sampling single batch at iteration 26000.
+WARNING - image.py - 2025-03-18 04:41:53,559 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 04:42:59,911 - Loss: 0.2506, step: 26100
+INFO - train_dpdm_base.py - 2025-03-18 04:43:39,450 - Eps-value after 109 epochs: 5.5423
+INFO - train_dpdm_base.py - 2025-03-18 04:44:06,038 - Loss: 0.2368, step: 26200
+INFO - train_dpdm_base.py - 2025-03-18 04:45:11,369 - Loss: 0.2499, step: 26300
+INFO - train_dpdm_base.py - 2025-03-18 04:46:16,569 - Loss: 0.2499, step: 26400
+INFO - train_dpdm_base.py - 2025-03-18 04:46:16,595 - Eps-value after 110 epochs: 5.5713
+INFO - train_dpdm_base.py - 2025-03-18 04:47:22,355 - Loss: 0.2445, step: 26500
+INFO - train_dpdm_base.py - 2025-03-18 04:48:28,440 - Loss: 0.2325, step: 26600
+INFO - train_dpdm_base.py - 2025-03-18 04:48:54,777 - Eps-value after 111 epochs: 5.6003
+INFO - train_dpdm_base.py - 2025-03-18 04:49:33,783 - Loss: 0.2313, step: 26700
+INFO - train_dpdm_base.py - 2025-03-18 04:50:38,664 - Loss: 0.2460, step: 26800
+INFO - train_dpdm_base.py - 2025-03-18 04:51:31,351 - Eps-value after 112 epochs: 5.6286
+INFO - train_dpdm_base.py - 2025-03-18 04:51:44,521 - Loss: 0.2273, step: 26900
+INFO - train_dpdm_base.py - 2025-03-18 04:52:50,259 - Loss: 0.2381, step: 27000
+INFO - train_dpdm_base.py - 2025-03-18 04:52:50,294 - Saving snapshot checkpoint and sampling single batch at iteration 27000.
+WARNING - image.py - 2025-03-18 04:52:51,022 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 04:53:56,035 - Loss: 0.2376, step: 27100
+INFO - train_dpdm_base.py - 2025-03-18 04:54:08,918 - Eps-value after 113 epochs: 5.6570
+INFO - train_dpdm_base.py - 2025-03-18 04:55:02,033 - Loss: 0.2319, step: 27200
+INFO - train_dpdm_base.py - 2025-03-18 04:56:07,392 - Loss: 0.2434, step: 27300
+INFO - train_dpdm_base.py - 2025-03-18 04:56:47,319 - Eps-value after 114 epochs: 5.6853
+INFO - train_dpdm_base.py - 2025-03-18 04:57:13,417 - Loss: 0.2258, step: 27400
+INFO - train_dpdm_base.py - 2025-03-18 04:58:19,588 - Loss: 0.2528, step: 27500
+INFO - train_dpdm_base.py - 2025-03-18 04:59:24,488 - Loss: 0.2459, step: 27600
+INFO - train_dpdm_base.py - 2025-03-18 04:59:24,515 - Eps-value after 115 epochs: 5.7137
+INFO - train_dpdm_base.py - 2025-03-18 05:00:29,325 - Loss: 0.2309, step: 27700
+INFO - train_dpdm_base.py - 2025-03-18 05:01:35,363 - Loss: 0.2485, step: 27800
+INFO - train_dpdm_base.py - 2025-03-18 05:02:01,641 - Eps-value after 116 epochs: 5.7420
+INFO - train_dpdm_base.py - 2025-03-18 05:02:41,075 - Loss: 0.2474, step: 27900
+INFO - train_dpdm_base.py - 2025-03-18 05:03:46,937 - Loss: 0.2408, step: 28000
+INFO - train_dpdm_base.py - 2025-03-18 05:03:46,947 - Saving snapshot checkpoint and sampling single batch at iteration 28000.
+WARNING - image.py - 2025-03-18 05:03:47,689 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 05:04:39,656 - Eps-value after 117 epochs: 5.7704
+INFO - train_dpdm_base.py - 2025-03-18 05:04:53,062 - Loss: 0.2588, step: 28100
+INFO - train_dpdm_base.py - 2025-03-18 05:05:58,752 - Loss: 0.2363, step: 28200
+INFO - train_dpdm_base.py - 2025-03-18 05:07:04,292 - Loss: 0.2484, step: 28300
+INFO - train_dpdm_base.py - 2025-03-18 05:07:17,487 - Eps-value after 118 epochs: 5.7985
+INFO - train_dpdm_base.py - 2025-03-18 05:08:09,708 - Loss: 0.2207, step: 28400
+INFO - train_dpdm_base.py - 2025-03-18 05:09:14,886 - Loss: 0.2383, step: 28500
+INFO - train_dpdm_base.py - 2025-03-18 05:09:54,134 - Eps-value after 119 epochs: 5.8262
+INFO - train_dpdm_base.py - 2025-03-18 05:10:20,757 - Loss: 0.2488, step: 28600
+INFO - train_dpdm_base.py - 2025-03-18 05:11:25,798 - Loss: 0.2158, step: 28700
+INFO - train_dpdm_base.py - 2025-03-18 05:12:31,133 - Loss: 0.2386, step: 28800
+INFO - train_dpdm_base.py - 2025-03-18 05:12:31,159 - Eps-value after 120 epochs: 5.8539
+INFO - train_dpdm_base.py - 2025-03-18 05:13:36,747 - Loss: 0.2297, step: 28900
+INFO - train_dpdm_base.py - 2025-03-18 05:14:43,021 - Loss: 0.2435, step: 29000
+INFO - train_dpdm_base.py - 2025-03-18 05:14:43,257 - Saving snapshot checkpoint and sampling single batch at iteration 29000.
+WARNING - image.py - 2025-03-18 05:14:43,981 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 05:15:10,412 - Eps-value after 121 epochs: 5.8816
+INFO - train_dpdm_base.py - 2025-03-18 05:15:49,490 - Loss: 0.2396, step: 29100
+INFO - train_dpdm_base.py - 2025-03-18 05:16:55,695 - Loss: 0.2256, step: 29200
+INFO - train_dpdm_base.py - 2025-03-18 05:17:47,280 - Eps-value after 122 epochs: 5.9093
+INFO - train_dpdm_base.py - 2025-03-18 05:18:00,287 - Loss: 0.2352, step: 29300
+INFO - train_dpdm_base.py - 2025-03-18 05:19:06,765 - Loss: 0.2358, step: 29400
+INFO - train_dpdm_base.py - 2025-03-18 05:20:12,257 - Loss: 0.2302, step: 29500
+INFO - train_dpdm_base.py - 2025-03-18 05:20:25,625 - Eps-value after 123 epochs: 5.9370
+INFO - train_dpdm_base.py - 2025-03-18 05:21:17,766 - Loss: 0.2305, step: 29600
+INFO - train_dpdm_base.py - 2025-03-18 05:22:22,535 - Loss: 0.2316, step: 29700
+INFO - train_dpdm_base.py - 2025-03-18 05:23:02,088 - Eps-value after 124 epochs: 5.9647
+INFO - train_dpdm_base.py - 2025-03-18 05:23:28,612 - Loss: 0.2275, step: 29800
+INFO - train_dpdm_base.py - 2025-03-18 05:24:34,643 - Loss: 0.2345, step: 29900
+INFO - train_dpdm_base.py - 2025-03-18 05:25:40,697 - Loss: 0.2627, step: 30000
+INFO - train_dpdm_base.py - 2025-03-18 05:25:40,724 - Eps-value after 125 epochs: 5.9925
+INFO - train_dpdm_base.py - 2025-03-18 05:25:40,749 - Saving snapshot checkpoint and sampling single batch at iteration 30000.
+WARNING - image.py - 2025-03-18 05:25:41,464 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 05:26:07,422 - FID 0 at iteration 30000: 28.586017
+INFO - train_dpdm_base.py - 2025-03-18 05:27:12,726 - Loss: 0.2380, step: 30100
+INFO - train_dpdm_base.py - 2025-03-18 05:28:17,448 - Loss: 0.2383, step: 30200
+INFO - train_dpdm_base.py - 2025-03-18 05:28:43,829 - Eps-value after 126 epochs: 6.0195
+INFO - train_dpdm_base.py - 2025-03-18 05:29:23,016 - Loss: 0.2458, step: 30300
+INFO - train_dpdm_base.py - 2025-03-18 05:30:28,438 - Loss: 0.2446, step: 30400
+INFO - train_dpdm_base.py - 2025-03-18 05:31:20,702 - Eps-value after 127 epochs: 6.0466
+INFO - train_dpdm_base.py - 2025-03-18 05:31:33,884 - Loss: 0.2301, step: 30500
+INFO - train_dpdm_base.py - 2025-03-18 05:32:39,137 - Loss: 0.2300, step: 30600
+INFO - train_dpdm_base.py - 2025-03-18 05:33:44,649 - Loss: 0.2386, step: 30700
+INFO - train_dpdm_base.py - 2025-03-18 05:33:57,605 - Eps-value after 128 epochs: 6.0737
+INFO - train_dpdm_base.py - 2025-03-18 05:34:50,008 - Loss: 0.2321, step: 30800
+INFO - train_dpdm_base.py - 2025-03-18 05:35:54,691 - Loss: 0.2251, step: 30900
+INFO - train_dpdm_base.py - 2025-03-18 05:36:34,528 - Eps-value after 129 epochs: 6.1007
+INFO - train_dpdm_base.py - 2025-03-18 05:37:00,902 - Loss: 0.2332, step: 31000
+INFO - train_dpdm_base.py - 2025-03-18 05:37:00,917 - Saving snapshot checkpoint and sampling single batch at iteration 31000.
+WARNING - image.py - 2025-03-18 05:37:01,650 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 05:38:07,250 - Loss: 0.2446, step: 31100
+INFO - train_dpdm_base.py - 2025-03-18 05:39:14,906 - Loss: 0.2267, step: 31200
+INFO - train_dpdm_base.py - 2025-03-18 05:39:14,933 - Eps-value after 130 epochs: 6.1278
+INFO - train_dpdm_base.py - 2025-03-18 05:40:20,865 - Loss: 0.2240, step: 31300
+INFO - train_dpdm_base.py - 2025-03-18 05:41:26,206 - Loss: 0.2233, step: 31400
+INFO - train_dpdm_base.py - 2025-03-18 05:41:52,759 - Eps-value after 131 epochs: 6.1549
+INFO - train_dpdm_base.py - 2025-03-18 05:42:32,310 - Loss: 0.2275, step: 31500
+INFO - train_dpdm_base.py - 2025-03-18 05:43:39,043 - Loss: 0.2430, step: 31600
+INFO - train_dpdm_base.py - 2025-03-18 05:44:32,074 - Eps-value after 132 epochs: 6.1820
+INFO - train_dpdm_base.py - 2025-03-18 05:44:45,101 - Loss: 0.2385, step: 31700
+INFO - train_dpdm_base.py - 2025-03-18 05:45:52,480 - Loss: 0.2228, step: 31800
+INFO - train_dpdm_base.py - 2025-03-18 05:46:57,399 - Loss: 0.2717, step: 31900
+INFO - train_dpdm_base.py - 2025-03-18 05:47:10,329 - Eps-value after 133 epochs: 6.2090
+INFO - train_dpdm_base.py - 2025-03-18 05:48:03,948 - Loss: 0.2571, step: 32000
+INFO - train_dpdm_base.py - 2025-03-18 05:48:03,965 - Saving snapshot checkpoint and sampling single batch at iteration 32000.
+WARNING - image.py - 2025-03-18 05:48:04,702 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 05:49:10,664 - Loss: 0.2135, step: 32100
+INFO - train_dpdm_base.py - 2025-03-18 05:49:50,386 - Eps-value after 134 epochs: 6.2355
+INFO - train_dpdm_base.py - 2025-03-18 05:50:16,396 - Loss: 0.2357, step: 32200
+INFO - train_dpdm_base.py - 2025-03-18 05:51:22,159 - Loss: 0.2298, step: 32300
+INFO - train_dpdm_base.py - 2025-03-18 05:52:27,728 - Loss: 0.2336, step: 32400
+INFO - train_dpdm_base.py - 2025-03-18 05:52:27,755 - Eps-value after 135 epochs: 6.2619
+INFO - train_dpdm_base.py - 2025-03-18 05:53:33,089 - Loss: 0.2462, step: 32500
+INFO - train_dpdm_base.py - 2025-03-18 05:54:39,424 - Loss: 0.2366, step: 32600
+INFO - train_dpdm_base.py - 2025-03-18 05:55:05,401 - Eps-value after 136 epochs: 6.2883
+INFO - train_dpdm_base.py - 2025-03-18 05:55:44,433 - Loss: 0.2427, step: 32700
+INFO - train_dpdm_base.py - 2025-03-18 05:56:49,758 - Loss: 0.2350, step: 32800
+INFO - train_dpdm_base.py - 2025-03-18 05:57:42,437 - Eps-value after 137 epochs: 6.3148
+INFO - train_dpdm_base.py - 2025-03-18 05:57:55,760 - Loss: 0.2437, step: 32900
+INFO - train_dpdm_base.py - 2025-03-18 05:59:01,183 - Loss: 0.2459, step: 33000
+INFO - train_dpdm_base.py - 2025-03-18 05:59:01,197 - Saving snapshot checkpoint and sampling single batch at iteration 33000.
+WARNING - image.py - 2025-03-18 05:59:01,912 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 06:00:07,229 - Loss: 0.2361, step: 33100
+INFO - train_dpdm_base.py - 2025-03-18 06:00:20,422 - Eps-value after 138 epochs: 6.3412
+INFO - train_dpdm_base.py - 2025-03-18 06:01:14,156 - Loss: 0.2444, step: 33200
+INFO - train_dpdm_base.py - 2025-03-18 06:02:19,814 - Loss: 0.2304, step: 33300
+INFO - train_dpdm_base.py - 2025-03-18 06:03:00,058 - Eps-value after 139 epochs: 6.3676
+INFO - train_dpdm_base.py - 2025-03-18 06:03:26,016 - Loss: 0.2310, step: 33400
+INFO - train_dpdm_base.py - 2025-03-18 06:04:31,206 - Loss: 0.2262, step: 33500
+INFO - train_dpdm_base.py - 2025-03-18 06:05:36,439 - Loss: 0.2468, step: 33600
+INFO - train_dpdm_base.py - 2025-03-18 06:05:36,459 - Eps-value after 140 epochs: 6.3941
+INFO - train_dpdm_base.py - 2025-03-18 06:06:42,382 - Loss: 0.2420, step: 33700
+INFO - train_dpdm_base.py - 2025-03-18 06:07:47,947 - Loss: 0.2354, step: 33800
+INFO - train_dpdm_base.py - 2025-03-18 06:08:14,064 - Eps-value after 141 epochs: 6.4205
+INFO - train_dpdm_base.py - 2025-03-18 06:08:53,242 - Loss: 0.2377, step: 33900
+INFO - train_dpdm_base.py - 2025-03-18 06:09:58,646 - Loss: 0.2637, step: 34000
+INFO - train_dpdm_base.py - 2025-03-18 06:09:58,657 - Saving snapshot checkpoint and sampling single batch at iteration 34000.
+WARNING - image.py - 2025-03-18 06:09:59,384 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 06:10:51,698 - Eps-value after 142 epochs: 6.4468
+INFO - train_dpdm_base.py - 2025-03-18 06:11:05,149 - Loss: 0.2327, step: 34100
+INFO - train_dpdm_base.py - 2025-03-18 06:12:11,723 - Loss: 0.2331, step: 34200
+INFO - train_dpdm_base.py - 2025-03-18 06:13:17,399 - Loss: 0.2130, step: 34300
+INFO - train_dpdm_base.py - 2025-03-18 06:13:30,543 - Eps-value after 143 epochs: 6.4726
+INFO - train_dpdm_base.py - 2025-03-18 06:14:22,622 - Loss: 0.2464, step: 34400
+INFO - train_dpdm_base.py - 2025-03-18 06:15:28,799 - Loss: 0.2373, step: 34500
+INFO - train_dpdm_base.py - 2025-03-18 06:16:08,203 - Eps-value after 144 epochs: 6.4984
+INFO - train_dpdm_base.py - 2025-03-18 06:16:34,476 - Loss: 0.2384, step: 34600
+INFO - train_dpdm_base.py - 2025-03-18 06:17:39,352 - Loss: 0.2526, step: 34700
+INFO - train_dpdm_base.py - 2025-03-18 06:18:45,316 - Loss: 0.2194, step: 34800
+INFO - train_dpdm_base.py - 2025-03-18 06:18:45,342 - Eps-value after 145 epochs: 6.5242
+INFO - train_dpdm_base.py - 2025-03-18 06:19:50,618 - Loss: 0.2115, step: 34900
+INFO - train_dpdm_base.py - 2025-03-18 06:20:56,749 - Loss: 0.2339, step: 35000
+INFO - train_dpdm_base.py - 2025-03-18 06:20:56,762 - Saving snapshot checkpoint and sampling single batch at iteration 35000.
+WARNING - image.py - 2025-03-18 06:20:57,509 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 06:21:24,030 - Eps-value after 146 epochs: 6.5500
+INFO - train_dpdm_base.py - 2025-03-18 06:22:03,182 - Loss: 0.2438, step: 35100
+INFO - train_dpdm_base.py - 2025-03-18 06:23:08,258 - Loss: 0.2427, step: 35200
+INFO - train_dpdm_base.py - 2025-03-18 06:23:59,981 - Eps-value after 147 epochs: 6.5758
+INFO - train_dpdm_base.py - 2025-03-18 06:24:13,090 - Loss: 0.2518, step: 35300
+INFO - train_dpdm_base.py - 2025-03-18 06:25:17,790 - Loss: 0.2486, step: 35400
+INFO - train_dpdm_base.py - 2025-03-18 06:26:23,367 - Loss: 0.2418, step: 35500
+INFO - train_dpdm_base.py - 2025-03-18 06:26:37,285 - Eps-value after 148 epochs: 6.6016
+INFO - train_dpdm_base.py - 2025-03-18 06:27:29,673 - Loss: 0.2162, step: 35600
+INFO - train_dpdm_base.py - 2025-03-18 06:28:35,787 - Loss: 0.2262, step: 35700
+INFO - train_dpdm_base.py - 2025-03-18 06:29:15,292 - Eps-value after 149 epochs: 6.6274
+INFO - train_dpdm_base.py - 2025-03-18 06:29:41,317 - Loss: 0.2432, step: 35800
+INFO - train_dpdm_base.py - 2025-03-18 06:30:47,538 - Loss: 0.2463, step: 35900
+INFO - train_dpdm_base.py - 2025-03-18 06:31:53,752 - Loss: 0.2259, step: 36000
+INFO - train_dpdm_base.py - 2025-03-18 06:31:53,774 - Eps-value after 150 epochs: 6.6532
+INFO - train_dpdm_base.py - 2025-03-18 06:31:53,803 - Saving snapshot checkpoint and sampling single batch at iteration 36000.
+WARNING - image.py - 2025-03-18 06:31:54,523 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 06:33:00,439 - Loss: 0.2185, step: 36100
+INFO - train_dpdm_base.py - 2025-03-18 06:34:06,903 - Loss: 0.2294, step: 36200
+INFO - train_dpdm_base.py - 2025-03-18 06:34:33,051 - Eps-value after 151 epochs: 6.6790
+INFO - train_dpdm_base.py - 2025-03-18 06:35:12,521 - Loss: 0.2274, step: 36300
+INFO - train_dpdm_base.py - 2025-03-18 06:36:18,972 - Loss: 0.2236, step: 36400
+INFO - train_dpdm_base.py - 2025-03-18 06:37:11,276 - Eps-value after 152 epochs: 6.7044
+INFO - train_dpdm_base.py - 2025-03-18 06:37:24,729 - Loss: 0.2190, step: 36500
+INFO - train_dpdm_base.py - 2025-03-18 06:38:30,280 - Loss: 0.2327, step: 36600
+INFO - train_dpdm_base.py - 2025-03-18 06:39:36,895 - Loss: 0.2504, step: 36700
+INFO - train_dpdm_base.py - 2025-03-18 06:39:49,857 - Eps-value after 153 epochs: 6.7296
+INFO - train_dpdm_base.py - 2025-03-18 06:40:42,548 - Loss: 0.2310, step: 36800
+INFO - train_dpdm_base.py - 2025-03-18 06:41:48,690 - Loss: 0.2148, step: 36900
+INFO - train_dpdm_base.py - 2025-03-18 06:42:28,633 - Eps-value after 154 epochs: 6.7547
+INFO - train_dpdm_base.py - 2025-03-18 06:42:54,974 - Loss: 0.2273, step: 37000
+INFO - train_dpdm_base.py - 2025-03-18 06:42:54,999 - Saving snapshot checkpoint and sampling single batch at iteration 37000.
+WARNING - image.py - 2025-03-18 06:42:55,739 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 06:44:01,077 - Loss: 0.2276, step: 37100
+INFO - train_dpdm_base.py - 2025-03-18 06:45:06,562 - Loss: 0.2313, step: 37200
+INFO - train_dpdm_base.py - 2025-03-18 06:45:06,588 - Eps-value after 155 epochs: 6.7799
+INFO - train_dpdm_base.py - 2025-03-18 06:46:12,691 - Loss: 0.2509, step: 37300
+INFO - train_dpdm_base.py - 2025-03-18 06:47:18,876 - Loss: 0.2327, step: 37400
+INFO - train_dpdm_base.py - 2025-03-18 06:47:45,208 - Eps-value after 156 epochs: 6.8051
+INFO - train_dpdm_base.py - 2025-03-18 06:48:24,137 - Loss: 0.2353, step: 37500
+INFO - train_dpdm_base.py - 2025-03-18 06:49:29,205 - Loss: 0.2375, step: 37600
+INFO - train_dpdm_base.py - 2025-03-18 06:50:21,839 - Eps-value after 157 epochs: 6.8303
+INFO - train_dpdm_base.py - 2025-03-18 06:50:35,075 - Loss: 0.2412, step: 37700
+INFO - train_dpdm_base.py - 2025-03-18 06:51:42,212 - Loss: 0.2291, step: 37800
+INFO - train_dpdm_base.py - 2025-03-18 06:52:48,331 - Loss: 0.2246, step: 37900
+INFO - train_dpdm_base.py - 2025-03-18 06:53:02,085 - Eps-value after 158 epochs: 6.8554
+INFO - train_dpdm_base.py - 2025-03-18 06:53:55,714 - Loss: 0.2221, step: 38000
+INFO - train_dpdm_base.py - 2025-03-18 06:53:55,732 - Saving snapshot checkpoint and sampling single batch at iteration 38000.
+WARNING - image.py - 2025-03-18 06:53:56,454 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 06:55:05,183 - Loss: 0.2387, step: 38100
+INFO - train_dpdm_base.py - 2025-03-18 06:55:44,544 - Eps-value after 159 epochs: 6.8806
+INFO - train_dpdm_base.py - 2025-03-18 06:56:11,112 - Loss: 0.2302, step: 38200
+INFO - train_dpdm_base.py - 2025-03-18 06:57:16,540 - Loss: 0.2196, step: 38300
+INFO - train_dpdm_base.py - 2025-03-18 06:58:23,356 - Loss: 0.2338, step: 38400
+INFO - train_dpdm_base.py - 2025-03-18 06:58:23,382 - Eps-value after 160 epochs: 6.9058
+INFO - train_dpdm_base.py - 2025-03-18 06:59:28,719 - Loss: 0.2261, step: 38500
+INFO - train_dpdm_base.py - 2025-03-18 07:00:34,569 - Loss: 0.2573, step: 38600
+INFO - train_dpdm_base.py - 2025-03-18 07:01:00,448 - Eps-value after 161 epochs: 6.9310
+INFO - train_dpdm_base.py - 2025-03-18 07:01:40,375 - Loss: 0.2341, step: 38700
+INFO - train_dpdm_base.py - 2025-03-18 07:02:46,198 - Loss: 0.2293, step: 38800
+INFO - train_dpdm_base.py - 2025-03-18 07:03:38,502 - Eps-value after 162 epochs: 6.9560
+INFO - train_dpdm_base.py - 2025-03-18 07:03:52,072 - Loss: 0.2248, step: 38900
+INFO - train_dpdm_base.py - 2025-03-18 07:04:57,812 - Loss: 0.2585, step: 39000
+INFO - train_dpdm_base.py - 2025-03-18 07:04:57,841 - Saving snapshot checkpoint and sampling single batch at iteration 39000.
+WARNING - image.py - 2025-03-18 07:04:58,589 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 07:06:04,210 - Loss: 0.2560, step: 39100
+INFO - train_dpdm_base.py - 2025-03-18 07:06:17,342 - Eps-value after 163 epochs: 6.9806
+INFO - train_dpdm_base.py - 2025-03-18 07:07:10,275 - Loss: 0.2283, step: 39200
+INFO - train_dpdm_base.py - 2025-03-18 07:08:16,530 - Loss: 0.2285, step: 39300
+INFO - train_dpdm_base.py - 2025-03-18 07:08:55,791 - Eps-value after 164 epochs: 7.0051
+INFO - train_dpdm_base.py - 2025-03-18 07:09:22,061 - Loss: 0.2222, step: 39400
+INFO - train_dpdm_base.py - 2025-03-18 07:10:28,612 - Loss: 0.2232, step: 39500
+INFO - train_dpdm_base.py - 2025-03-18 07:11:34,048 - Loss: 0.2302, step: 39600
+INFO - train_dpdm_base.py - 2025-03-18 07:11:34,069 - Eps-value after 165 epochs: 7.0297
+INFO - train_dpdm_base.py - 2025-03-18 07:12:39,775 - Loss: 0.2188, step: 39700
+INFO - train_dpdm_base.py - 2025-03-18 07:13:46,144 - Loss: 0.2003, step: 39800
+INFO - train_dpdm_base.py - 2025-03-18 07:14:11,772 - Eps-value after 166 epochs: 7.0542
+INFO - train_dpdm_base.py - 2025-03-18 07:14:50,759 - Loss: 0.2329, step: 39900
+INFO - train_dpdm_base.py - 2025-03-18 07:15:56,096 - Loss: 0.2402, step: 40000
+INFO - train_dpdm_base.py - 2025-03-18 07:15:56,194 - Saving snapshot checkpoint and sampling single batch at iteration 40000.
+WARNING - image.py - 2025-03-18 07:15:56,913 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 07:16:22,991 - FID 0 at iteration 40000: 25.442370
+INFO - train_dpdm_base.py - 2025-03-18 07:17:14,664 - Eps-value after 167 epochs: 7.0788
+INFO - train_dpdm_base.py - 2025-03-18 07:17:27,915 - Loss: 0.2133, step: 40100
+INFO - train_dpdm_base.py - 2025-03-18 07:18:34,073 - Loss: 0.2548, step: 40200
+INFO - train_dpdm_base.py - 2025-03-18 07:19:39,289 - Loss: 0.2337, step: 40300
+INFO - train_dpdm_base.py - 2025-03-18 07:19:52,510 - Eps-value after 168 epochs: 7.1033
+INFO - train_dpdm_base.py - 2025-03-18 07:20:46,000 - Loss: 0.2389, step: 40400
+INFO - train_dpdm_base.py - 2025-03-18 07:21:51,772 - Loss: 0.2285, step: 40500
+INFO - train_dpdm_base.py - 2025-03-18 07:22:31,160 - Eps-value after 169 epochs: 7.1279
+INFO - train_dpdm_base.py - 2025-03-18 07:22:57,678 - Loss: 0.2255, step: 40600
+INFO - train_dpdm_base.py - 2025-03-18 07:24:04,539 - Loss: 0.2206, step: 40700
+INFO - train_dpdm_base.py - 2025-03-18 07:25:10,678 - Loss: 0.2338, step: 40800
+INFO - train_dpdm_base.py - 2025-03-18 07:25:10,703 - Eps-value after 170 epochs: 7.1524
+INFO - train_dpdm_base.py - 2025-03-18 07:26:16,320 - Loss: 0.2337, step: 40900
+INFO - train_dpdm_base.py - 2025-03-18 07:27:21,601 - Loss: 0.2462, step: 41000
+INFO - train_dpdm_base.py - 2025-03-18 07:27:21,615 - Saving snapshot checkpoint and sampling single batch at iteration 41000.
+WARNING - image.py - 2025-03-18 07:27:22,341 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 07:27:48,878 - Eps-value after 171 epochs: 7.1770
+INFO - train_dpdm_base.py - 2025-03-18 07:28:27,945 - Loss: 0.2449, step: 41100
+INFO - train_dpdm_base.py - 2025-03-18 07:29:34,334 - Loss: 0.2474, step: 41200
+INFO - train_dpdm_base.py - 2025-03-18 07:30:26,911 - Eps-value after 172 epochs: 7.2015
+INFO - train_dpdm_base.py - 2025-03-18 07:30:40,026 - Loss: 0.2388, step: 41300
+INFO - train_dpdm_base.py - 2025-03-18 07:31:46,032 - Loss: 0.2154, step: 41400
+INFO - train_dpdm_base.py - 2025-03-18 07:32:52,951 - Loss: 0.2341, step: 41500
+INFO - train_dpdm_base.py - 2025-03-18 07:33:06,275 - Eps-value after 173 epochs: 7.2261
+INFO - train_dpdm_base.py - 2025-03-18 07:33:58,730 - Loss: 0.2383, step: 41600
+INFO - train_dpdm_base.py - 2025-03-18 07:35:05,093 - Loss: 0.2279, step: 41700
+INFO - train_dpdm_base.py - 2025-03-18 07:35:44,693 - Eps-value after 174 epochs: 7.2502
+INFO - train_dpdm_base.py - 2025-03-18 07:36:11,258 - Loss: 0.2158, step: 41800
+INFO - train_dpdm_base.py - 2025-03-18 07:37:17,787 - Loss: 0.2292, step: 41900
+INFO - train_dpdm_base.py - 2025-03-18 07:38:22,979 - Loss: 0.2258, step: 42000
+INFO - train_dpdm_base.py - 2025-03-18 07:38:23,005 - Eps-value after 175 epochs: 7.2742
+INFO - train_dpdm_base.py - 2025-03-18 07:38:23,031 - Saving snapshot checkpoint and sampling single batch at iteration 42000.
+WARNING - image.py - 2025-03-18 07:38:23,783 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 07:39:29,648 - Loss: 0.2481, step: 42100
+INFO - train_dpdm_base.py - 2025-03-18 07:40:35,360 - Loss: 0.2288, step: 42200
+INFO - train_dpdm_base.py - 2025-03-18 07:41:01,718 - Eps-value after 176 epochs: 7.2981
+INFO - train_dpdm_base.py - 2025-03-18 07:41:40,769 - Loss: 0.2326, step: 42300
+INFO - train_dpdm_base.py - 2025-03-18 07:42:46,911 - Loss: 0.2427, step: 42400
+INFO - train_dpdm_base.py - 2025-03-18 07:43:40,284 - Eps-value after 177 epochs: 7.3220
+INFO - train_dpdm_base.py - 2025-03-18 07:43:53,305 - Loss: 0.2402, step: 42500
+INFO - train_dpdm_base.py - 2025-03-18 07:44:58,710 - Loss: 0.2309, step: 42600
+INFO - train_dpdm_base.py - 2025-03-18 07:46:04,658 - Loss: 0.2272, step: 42700
+INFO - train_dpdm_base.py - 2025-03-18 07:46:17,624 - Eps-value after 178 epochs: 7.3459
+INFO - train_dpdm_base.py - 2025-03-18 07:47:10,308 - Loss: 0.2387, step: 42800
+INFO - train_dpdm_base.py - 2025-03-18 07:48:15,910 - Loss: 0.2327, step: 42900
+INFO - train_dpdm_base.py - 2025-03-18 07:48:55,052 - Eps-value after 179 epochs: 7.3698
+INFO - train_dpdm_base.py - 2025-03-18 07:49:21,271 - Loss: 0.2233, step: 43000
+INFO - train_dpdm_base.py - 2025-03-18 07:49:21,275 - Saving snapshot checkpoint and sampling single batch at iteration 43000.
+WARNING - image.py - 2025-03-18 07:49:21,999 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 07:50:26,652 - Loss: 0.2380, step: 43100
+INFO - train_dpdm_base.py - 2025-03-18 07:51:33,191 - Loss: 0.2405, step: 43200
+INFO - train_dpdm_base.py - 2025-03-18 07:51:33,218 - Eps-value after 180 epochs: 7.3938
+INFO - train_dpdm_base.py - 2025-03-18 07:52:37,928 - Loss: 0.2355, step: 43300
+INFO - train_dpdm_base.py - 2025-03-18 07:53:42,425 - Loss: 0.2322, step: 43400
+INFO - train_dpdm_base.py - 2025-03-18 07:54:08,345 - Eps-value after 181 epochs: 7.4177
+INFO - train_dpdm_base.py - 2025-03-18 07:54:47,567 - Loss: 0.2422, step: 43500
+INFO - train_dpdm_base.py - 2025-03-18 07:55:53,179 - Loss: 0.2523, step: 43600
+INFO - train_dpdm_base.py - 2025-03-18 07:56:46,013 - Eps-value after 182 epochs: 7.4416
+INFO - train_dpdm_base.py - 2025-03-18 07:56:59,176 - Loss: 0.2318, step: 43700
+INFO - train_dpdm_base.py - 2025-03-18 07:58:04,883 - Loss: 0.2339, step: 43800
+INFO - train_dpdm_base.py - 2025-03-18 07:59:10,697 - Loss: 0.2355, step: 43900
+INFO - train_dpdm_base.py - 2025-03-18 07:59:23,706 - Eps-value after 183 epochs: 7.4655
+INFO - train_dpdm_base.py - 2025-03-18 08:00:16,302 - Loss: 0.2487, step: 44000
+INFO - train_dpdm_base.py - 2025-03-18 08:00:16,319 - Saving snapshot checkpoint and sampling single batch at iteration 44000.
+WARNING - image.py - 2025-03-18 08:00:17,046 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 08:01:23,160 - Loss: 0.2455, step: 44100
+INFO - train_dpdm_base.py - 2025-03-18 08:02:01,737 - Eps-value after 184 epochs: 7.4895
+INFO - train_dpdm_base.py - 2025-03-18 08:02:27,684 - Loss: 0.2444, step: 44200
+INFO - train_dpdm_base.py - 2025-03-18 08:03:33,695 - Loss: 0.2339, step: 44300
+INFO - train_dpdm_base.py - 2025-03-18 08:04:39,743 - Loss: 0.2276, step: 44400
+INFO - train_dpdm_base.py - 2025-03-18 08:04:39,765 - Eps-value after 185 epochs: 7.5134
+INFO - train_dpdm_base.py - 2025-03-18 08:05:45,223 - Loss: 0.2358, step: 44500
+INFO - train_dpdm_base.py - 2025-03-18 08:06:51,199 - Loss: 0.2097, step: 44600
+INFO - train_dpdm_base.py - 2025-03-18 08:07:17,044 - Eps-value after 186 epochs: 7.5373
+INFO - train_dpdm_base.py - 2025-03-18 08:07:56,227 - Loss: 0.2279, step: 44700
+INFO - train_dpdm_base.py - 2025-03-18 08:09:01,749 - Loss: 0.2235, step: 44800
+INFO - train_dpdm_base.py - 2025-03-18 08:09:53,316 - Eps-value after 187 epochs: 7.5608
+INFO - train_dpdm_base.py - 2025-03-18 08:10:06,378 - Loss: 0.2432, step: 44900
+INFO - train_dpdm_base.py - 2025-03-18 08:11:12,566 - Loss: 0.2252, step: 45000
+INFO - train_dpdm_base.py - 2025-03-18 08:11:12,570 - Saving snapshot checkpoint and sampling single batch at iteration 45000.
+WARNING - image.py - 2025-03-18 08:11:13,291 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 08:12:19,624 - Loss: 0.2243, step: 45100
+INFO - train_dpdm_base.py - 2025-03-18 08:12:32,788 - Eps-value after 188 epochs: 7.5841
+INFO - train_dpdm_base.py - 2025-03-18 08:13:25,199 - Loss: 0.2339, step: 45200
+INFO - train_dpdm_base.py - 2025-03-18 08:14:31,034 - Loss: 0.2168, step: 45300
+INFO - train_dpdm_base.py - 2025-03-18 08:15:10,754 - Eps-value after 189 epochs: 7.6074
+INFO - train_dpdm_base.py - 2025-03-18 08:15:36,790 - Loss: 0.2427, step: 45400
+INFO - train_dpdm_base.py - 2025-03-18 08:16:42,564 - Loss: 0.2332, step: 45500
+INFO - train_dpdm_base.py - 2025-03-18 08:17:48,818 - Loss: 0.2395, step: 45600
+INFO - train_dpdm_base.py - 2025-03-18 08:17:48,845 - Eps-value after 190 epochs: 7.6307
+INFO - train_dpdm_base.py - 2025-03-18 08:18:55,015 - Loss: 0.2239, step: 45700
+INFO - train_dpdm_base.py - 2025-03-18 08:20:00,445 - Loss: 0.2279, step: 45800
+INFO - train_dpdm_base.py - 2025-03-18 08:20:26,743 - Eps-value after 191 epochs: 7.6540
+INFO - train_dpdm_base.py - 2025-03-18 08:21:06,581 - Loss: 0.2129, step: 45900
+INFO - train_dpdm_base.py - 2025-03-18 08:22:11,939 - Loss: 0.2301, step: 46000
+INFO - train_dpdm_base.py - 2025-03-18 08:22:11,957 - Saving snapshot checkpoint and sampling single batch at iteration 46000.
+WARNING - image.py - 2025-03-18 08:22:12,663 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 08:23:04,574 - Eps-value after 192 epochs: 7.6773
+INFO - train_dpdm_base.py - 2025-03-18 08:23:17,502 - Loss: 0.2390, step: 46100
+INFO - train_dpdm_base.py - 2025-03-18 08:24:23,364 - Loss: 0.2132, step: 46200
+INFO - train_dpdm_base.py - 2025-03-18 08:25:28,725 - Loss: 0.2453, step: 46300
+INFO - train_dpdm_base.py - 2025-03-18 08:25:41,717 - Eps-value after 193 epochs: 7.7005
+INFO - train_dpdm_base.py - 2025-03-18 08:26:33,413 - Loss: 0.2365, step: 46400
+INFO - train_dpdm_base.py - 2025-03-18 08:27:38,868 - Loss: 0.2149, step: 46500
+INFO - train_dpdm_base.py - 2025-03-18 08:28:19,042 - Eps-value after 194 epochs: 7.7238
+INFO - train_dpdm_base.py - 2025-03-18 08:28:45,208 - Loss: 0.2398, step: 46600
+INFO - train_dpdm_base.py - 2025-03-18 08:29:50,278 - Loss: 0.2075, step: 46700
+INFO - train_dpdm_base.py - 2025-03-18 08:30:56,408 - Loss: 0.2261, step: 46800
+INFO - train_dpdm_base.py - 2025-03-18 08:30:56,429 - Eps-value after 195 epochs: 7.7471
+INFO - train_dpdm_base.py - 2025-03-18 08:32:01,569 - Loss: 0.2217, step: 46900
+INFO - train_dpdm_base.py - 2025-03-18 08:33:07,458 - Loss: 0.2296, step: 47000
+INFO - train_dpdm_base.py - 2025-03-18 08:33:07,504 - Saving snapshot checkpoint and sampling single batch at iteration 47000.
+WARNING - image.py - 2025-03-18 08:33:08,234 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 08:33:34,405 - Eps-value after 196 epochs: 7.7704
+INFO - train_dpdm_base.py - 2025-03-18 08:34:13,353 - Loss: 0.2154, step: 47100
+INFO - train_dpdm_base.py - 2025-03-18 08:35:19,124 - Loss: 0.2459, step: 47200
+INFO - train_dpdm_base.py - 2025-03-18 08:36:11,760 - Eps-value after 197 epochs: 7.7937
+INFO - train_dpdm_base.py - 2025-03-18 08:36:24,690 - Loss: 0.2415, step: 47300
+INFO - train_dpdm_base.py - 2025-03-18 08:37:31,053 - Loss: 0.2371, step: 47400
+INFO - train_dpdm_base.py - 2025-03-18 08:38:36,451 - Loss: 0.2166, step: 47500
+INFO - train_dpdm_base.py - 2025-03-18 08:38:49,373 - Eps-value after 198 epochs: 7.8170
+INFO - train_dpdm_base.py - 2025-03-18 08:39:41,806 - Loss: 0.2399, step: 47600
+INFO - train_dpdm_base.py - 2025-03-18 08:40:48,397 - Loss: 0.2353, step: 47700
+INFO - train_dpdm_base.py - 2025-03-18 08:41:27,441 - Eps-value after 199 epochs: 7.8403
+INFO - train_dpdm_base.py - 2025-03-18 08:41:53,319 - Loss: 0.2097, step: 47800
+INFO - train_dpdm_base.py - 2025-03-18 08:42:59,594 - Loss: 0.2325, step: 47900
+INFO - train_dpdm_base.py - 2025-03-18 08:44:05,551 - Loss: 0.2257, step: 48000
+INFO - train_dpdm_base.py - 2025-03-18 08:44:05,572 - Eps-value after 200 epochs: 7.8636
+INFO - train_dpdm_base.py - 2025-03-18 08:44:05,593 - Saving snapshot checkpoint and sampling single batch at iteration 48000.
+WARNING - image.py - 2025-03-18 08:44:06,335 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 08:45:12,989 - Loss: 0.2222, step: 48100
+INFO - train_dpdm_base.py - 2025-03-18 08:46:18,875 - Loss: 0.2322, step: 48200
+INFO - train_dpdm_base.py - 2025-03-18 08:46:45,407 - Eps-value after 201 epochs: 7.8866
+INFO - train_dpdm_base.py - 2025-03-18 08:47:25,174 - Loss: 0.2304, step: 48300
+INFO - train_dpdm_base.py - 2025-03-18 08:48:30,716 - Loss: 0.2206, step: 48400
+INFO - train_dpdm_base.py - 2025-03-18 08:49:23,610 - Eps-value after 202 epochs: 7.9093
+INFO - train_dpdm_base.py - 2025-03-18 08:49:36,525 - Loss: 0.2220, step: 48500
+INFO - train_dpdm_base.py - 2025-03-18 08:50:41,589 - Loss: 0.2345, step: 48600
+INFO - train_dpdm_base.py - 2025-03-18 08:51:48,413 - Loss: 0.2254, step: 48700
+INFO - train_dpdm_base.py - 2025-03-18 08:52:01,724 - Eps-value after 203 epochs: 7.9320
+INFO - train_dpdm_base.py - 2025-03-18 08:52:53,784 - Loss: 0.2360, step: 48800
+INFO - train_dpdm_base.py - 2025-03-18 08:53:59,158 - Loss: 0.2505, step: 48900
+INFO - train_dpdm_base.py - 2025-03-18 08:54:39,237 - Eps-value after 204 epochs: 7.9547
+INFO - train_dpdm_base.py - 2025-03-18 08:55:05,818 - Loss: 0.2379, step: 49000
+INFO - train_dpdm_base.py - 2025-03-18 08:55:05,822 - Saving snapshot checkpoint and sampling single batch at iteration 49000.
+WARNING - image.py - 2025-03-18 08:55:06,556 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 08:56:11,626 - Loss: 0.2133, step: 49100
+INFO - train_dpdm_base.py - 2025-03-18 08:57:16,748 - Loss: 0.2180, step: 49200
+INFO - train_dpdm_base.py - 2025-03-18 08:57:16,775 - Eps-value after 205 epochs: 7.9773
+INFO - train_dpdm_base.py - 2025-03-18 08:58:22,260 - Loss: 0.2204, step: 49300
+INFO - train_dpdm_base.py - 2025-03-18 08:59:27,823 - Loss: 0.2230, step: 49400
+INFO - train_dpdm_base.py - 2025-03-18 08:59:54,342 - Eps-value after 206 epochs: 8.0000
+INFO - train_dpdm_base.py - 2025-03-18 09:00:33,616 - Loss: 0.2225, step: 49500
+INFO - train_dpdm_base.py - 2025-03-18 09:01:39,200 - Loss: 0.2260, step: 49600
+INFO - train_dpdm_base.py - 2025-03-18 09:02:34,719 - Eps-value after 207 epochs: 8.0227
+INFO - train_dpdm_base.py - 2025-03-18 09:02:47,250 - Loss: 0.2280, step: 49700
+INFO - train_dpdm_base.py - 2025-03-18 09:03:52,918 - Loss: 0.2280, step: 49800
+INFO - train_dpdm_base.py - 2025-03-18 09:04:58,924 - Loss: 0.2275, step: 49900
+INFO - train_dpdm_base.py - 2025-03-18 09:05:12,071 - Eps-value after 208 epochs: 8.0454
+INFO - train_dpdm_base.py - 2025-03-18 09:06:04,264 - Loss: 0.2277, step: 50000
+INFO - train_dpdm_base.py - 2025-03-18 09:06:04,275 - Saving snapshot checkpoint and sampling single batch at iteration 50000.
+WARNING - image.py - 2025-03-18 09:06:05,013 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 09:06:30,007 - FID 0 at iteration 50000: 24.179684
+INFO - train_dpdm_base.py - 2025-03-18 09:07:36,078 - Loss: 0.2377, step: 50100
+INFO - train_dpdm_base.py - 2025-03-18 09:08:15,805 - Eps-value after 209 epochs: 8.0680
+INFO - train_dpdm_base.py - 2025-03-18 09:08:41,734 - Loss: 0.2185, step: 50200
+INFO - train_dpdm_base.py - 2025-03-18 09:09:47,962 - Loss: 0.2330, step: 50300
+INFO - train_dpdm_base.py - 2025-03-18 09:10:53,941 - Loss: 0.2179, step: 50400
+INFO - train_dpdm_base.py - 2025-03-18 09:10:54,248 - Eps-value after 210 epochs: 8.0907
+INFO - train_dpdm_base.py - 2025-03-18 09:12:00,711 - Loss: 0.2417, step: 50500
+INFO - train_dpdm_base.py - 2025-03-18 09:13:06,000 - Loss: 0.2277, step: 50600
+INFO - train_dpdm_base.py - 2025-03-18 09:13:32,249 - Eps-value after 211 epochs: 8.1134
+INFO - train_dpdm_base.py - 2025-03-18 09:14:11,793 - Loss: 0.2211, step: 50700
+INFO - train_dpdm_base.py - 2025-03-18 09:15:19,016 - Loss: 0.2154, step: 50800
+INFO - train_dpdm_base.py - 2025-03-18 09:16:11,001 - Eps-value after 212 epochs: 8.1360
+INFO - train_dpdm_base.py - 2025-03-18 09:16:24,064 - Loss: 0.2283, step: 50900
+INFO - train_dpdm_base.py - 2025-03-18 09:17:29,773 - Loss: 0.2287, step: 51000
+INFO - train_dpdm_base.py - 2025-03-18 09:17:29,797 - Saving snapshot checkpoint and sampling single batch at iteration 51000.
+WARNING - image.py - 2025-03-18 09:17:30,496 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 09:18:35,657 - Loss: 0.2255, step: 51100
+INFO - train_dpdm_base.py - 2025-03-18 09:18:48,613 - Eps-value after 213 epochs: 8.1587
+INFO - train_dpdm_base.py - 2025-03-18 09:19:40,595 - Loss: 0.2389, step: 51200
+INFO - train_dpdm_base.py - 2025-03-18 09:20:46,057 - Loss: 0.2219, step: 51300
+INFO - train_dpdm_base.py - 2025-03-18 09:21:25,691 - Eps-value after 214 epochs: 8.1814
+INFO - train_dpdm_base.py - 2025-03-18 09:21:52,721 - Loss: 0.2297, step: 51400
+INFO - train_dpdm_base.py - 2025-03-18 09:22:58,673 - Loss: 0.2303, step: 51500
+INFO - train_dpdm_base.py - 2025-03-18 09:24:04,512 - Loss: 0.2395, step: 51600
+INFO - train_dpdm_base.py - 2025-03-18 09:24:04,605 - Eps-value after 215 epochs: 8.2041
+INFO - train_dpdm_base.py - 2025-03-18 09:25:09,614 - Loss: 0.2198, step: 51700
+INFO - train_dpdm_base.py - 2025-03-18 09:26:15,727 - Loss: 0.2338, step: 51800
+INFO - train_dpdm_base.py - 2025-03-18 09:26:41,531 - Eps-value after 216 epochs: 8.2267
+INFO - train_dpdm_base.py - 2025-03-18 09:27:20,713 - Loss: 0.2246, step: 51900
+INFO - train_dpdm_base.py - 2025-03-18 09:28:26,479 - Loss: 0.2344, step: 52000
+INFO - train_dpdm_base.py - 2025-03-18 09:28:26,494 - Saving snapshot checkpoint and sampling single batch at iteration 52000.
+WARNING - image.py - 2025-03-18 09:28:27,218 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 09:29:20,411 - Eps-value after 217 epochs: 8.2491
+INFO - train_dpdm_base.py - 2025-03-18 09:29:33,442 - Loss: 0.2289, step: 52100
+INFO - train_dpdm_base.py - 2025-03-18 09:30:39,290 - Loss: 0.2234, step: 52200
+INFO - train_dpdm_base.py - 2025-03-18 09:31:44,790 - Loss: 0.2307, step: 52300
+INFO - train_dpdm_base.py - 2025-03-18 09:31:58,058 - Eps-value after 218 epochs: 8.2711
+INFO - train_dpdm_base.py - 2025-03-18 09:32:50,055 - Loss: 0.2289, step: 52400
+INFO - train_dpdm_base.py - 2025-03-18 09:33:54,372 - Loss: 0.2223, step: 52500
+INFO - train_dpdm_base.py - 2025-03-18 09:34:33,416 - Eps-value after 219 epochs: 8.2932
+INFO - train_dpdm_base.py - 2025-03-18 09:34:59,514 - Loss: 0.2221, step: 52600
+INFO - train_dpdm_base.py - 2025-03-18 09:36:05,770 - Loss: 0.2191, step: 52700
+INFO - train_dpdm_base.py - 2025-03-18 09:37:12,122 - Loss: 0.2187, step: 52800
+INFO - train_dpdm_base.py - 2025-03-18 09:37:12,149 - Eps-value after 220 epochs: 8.3152
+INFO - train_dpdm_base.py - 2025-03-18 09:38:16,890 - Loss: 0.2095, step: 52900
+INFO - train_dpdm_base.py - 2025-03-18 09:39:22,231 - Loss: 0.2296, step: 53000
+INFO - train_dpdm_base.py - 2025-03-18 09:39:22,247 - Saving snapshot checkpoint and sampling single batch at iteration 53000.
+WARNING - image.py - 2025-03-18 09:39:22,950 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 09:39:49,980 - Eps-value after 221 epochs: 8.3373
+INFO - train_dpdm_base.py - 2025-03-18 09:40:29,487 - Loss: 0.2454, step: 53100
+INFO - train_dpdm_base.py - 2025-03-18 09:41:36,486 - Loss: 0.2093, step: 53200
+INFO - train_dpdm_base.py - 2025-03-18 09:42:29,276 - Eps-value after 222 epochs: 8.3593
+INFO - train_dpdm_base.py - 2025-03-18 09:42:42,776 - Loss: 0.2165, step: 53300
+INFO - train_dpdm_base.py - 2025-03-18 09:43:49,536 - Loss: 0.2292, step: 53400
+INFO - train_dpdm_base.py - 2025-03-18 09:44:55,709 - Loss: 0.2237, step: 53500
+INFO - train_dpdm_base.py - 2025-03-18 09:45:09,420 - Eps-value after 223 epochs: 8.3814
+INFO - train_dpdm_base.py - 2025-03-18 09:46:01,845 - Loss: 0.2264, step: 53600
+INFO - train_dpdm_base.py - 2025-03-18 09:47:07,236 - Loss: 0.2355, step: 53700
+INFO - train_dpdm_base.py - 2025-03-18 09:47:46,715 - Eps-value after 224 epochs: 8.4034
+INFO - train_dpdm_base.py - 2025-03-18 09:48:13,183 - Loss: 0.2211, step: 53800
+INFO - train_dpdm_base.py - 2025-03-18 09:49:19,400 - Loss: 0.2270, step: 53900
+INFO - train_dpdm_base.py - 2025-03-18 09:50:25,637 - Loss: 0.2218, step: 54000
+INFO - train_dpdm_base.py - 2025-03-18 09:50:25,663 - Eps-value after 225 epochs: 8.4255
+INFO - train_dpdm_base.py - 2025-03-18 09:50:25,681 - Saving snapshot checkpoint and sampling single batch at iteration 54000.
+WARNING - image.py - 2025-03-18 09:50:26,426 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 09:51:33,447 - Loss: 0.2283, step: 54100
+INFO - train_dpdm_base.py - 2025-03-18 09:52:38,948 - Loss: 0.2283, step: 54200
+INFO - train_dpdm_base.py - 2025-03-18 09:53:06,065 - Eps-value after 226 epochs: 8.4475
+INFO - train_dpdm_base.py - 2025-03-18 09:53:45,782 - Loss: 0.2306, step: 54300
+INFO - train_dpdm_base.py - 2025-03-18 09:54:50,780 - Loss: 0.2000, step: 54400
+INFO - train_dpdm_base.py - 2025-03-18 09:55:44,352 - Eps-value after 227 epochs: 8.4696
+INFO - train_dpdm_base.py - 2025-03-18 09:55:57,576 - Loss: 0.2135, step: 54500
+INFO - train_dpdm_base.py - 2025-03-18 09:57:03,143 - Loss: 0.2248, step: 54600
+INFO - train_dpdm_base.py - 2025-03-18 09:58:09,618 - Loss: 0.2291, step: 54700
+INFO - train_dpdm_base.py - 2025-03-18 09:58:22,768 - Eps-value after 228 epochs: 8.4916
+INFO - train_dpdm_base.py - 2025-03-18 09:59:14,537 - Loss: 0.2305, step: 54800
+INFO - train_dpdm_base.py - 2025-03-18 10:00:19,779 - Loss: 0.2188, step: 54900
+INFO - train_dpdm_base.py - 2025-03-18 10:00:58,965 - Eps-value after 229 epochs: 8.5137
+INFO - train_dpdm_base.py - 2025-03-18 10:01:24,779 - Loss: 0.2398, step: 55000
+INFO - train_dpdm_base.py - 2025-03-18 10:01:24,782 - Saving snapshot checkpoint and sampling single batch at iteration 55000.
+WARNING - image.py - 2025-03-18 10:01:25,488 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 10:02:31,539 - Loss: 0.2286, step: 55100
+INFO - train_dpdm_base.py - 2025-03-18 10:03:37,042 - Loss: 0.2225, step: 55200
+INFO - train_dpdm_base.py - 2025-03-18 10:03:37,435 - Eps-value after 230 epochs: 8.5357
+INFO - train_dpdm_base.py - 2025-03-18 10:04:43,429 - Loss: 0.2250, step: 55300
+INFO - train_dpdm_base.py - 2025-03-18 10:05:49,890 - Loss: 0.2046, step: 55400
+INFO - train_dpdm_base.py - 2025-03-18 10:06:16,677 - Eps-value after 231 epochs: 8.5578
+INFO - train_dpdm_base.py - 2025-03-18 10:06:56,602 - Loss: 0.2453, step: 55500
+INFO - train_dpdm_base.py - 2025-03-18 10:08:03,569 - Loss: 0.2232, step: 55600
+INFO - train_dpdm_base.py - 2025-03-18 10:08:55,629 - Eps-value after 232 epochs: 8.5798
+INFO - train_dpdm_base.py - 2025-03-18 10:09:08,775 - Loss: 0.2143, step: 55700
+INFO - train_dpdm_base.py - 2025-03-18 10:10:13,840 - Loss: 0.2382, step: 55800
+INFO - train_dpdm_base.py - 2025-03-18 10:11:18,954 - Loss: 0.2366, step: 55900
+INFO - train_dpdm_base.py - 2025-03-18 10:11:32,206 - Eps-value after 233 epochs: 8.6019
+INFO - train_dpdm_base.py - 2025-03-18 10:12:24,338 - Loss: 0.2125, step: 56000
+INFO - train_dpdm_base.py - 2025-03-18 10:12:24,354 - Saving snapshot checkpoint and sampling single batch at iteration 56000.
+WARNING - image.py - 2025-03-18 10:12:25,075 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 10:13:30,588 - Loss: 0.2236, step: 56100
+INFO - train_dpdm_base.py - 2025-03-18 10:14:10,946 - Eps-value after 234 epochs: 8.6239
+INFO - train_dpdm_base.py - 2025-03-18 10:14:37,873 - Loss: 0.2110, step: 56200
+INFO - train_dpdm_base.py - 2025-03-18 10:15:43,273 - Loss: 0.2370, step: 56300
+INFO - train_dpdm_base.py - 2025-03-18 10:16:48,883 - Loss: 0.2128, step: 56400
+INFO - train_dpdm_base.py - 2025-03-18 10:16:48,910 - Eps-value after 235 epochs: 8.6456
+INFO - train_dpdm_base.py - 2025-03-18 10:17:55,309 - Loss: 0.2136, step: 56500
+INFO - train_dpdm_base.py - 2025-03-18 10:19:00,857 - Loss: 0.2289, step: 56600
+INFO - train_dpdm_base.py - 2025-03-18 10:19:26,955 - Eps-value after 236 epochs: 8.6670
+INFO - train_dpdm_base.py - 2025-03-18 10:20:06,245 - Loss: 0.2302, step: 56700
+INFO - train_dpdm_base.py - 2025-03-18 10:21:12,302 - Loss: 0.2083, step: 56800
+INFO - train_dpdm_base.py - 2025-03-18 10:22:04,747 - Eps-value after 237 epochs: 8.6884
+INFO - train_dpdm_base.py - 2025-03-18 10:22:18,077 - Loss: 0.2281, step: 56900
+INFO - train_dpdm_base.py - 2025-03-18 10:23:23,509 - Loss: 0.2236, step: 57000
+INFO - train_dpdm_base.py - 2025-03-18 10:23:23,515 - Saving snapshot checkpoint and sampling single batch at iteration 57000.
+WARNING - image.py - 2025-03-18 10:23:24,231 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 10:24:30,344 - Loss: 0.2169, step: 57100
+INFO - train_dpdm_base.py - 2025-03-18 10:24:43,643 - Eps-value after 238 epochs: 8.7098
+INFO - train_dpdm_base.py - 2025-03-18 10:25:36,568 - Loss: 0.2344, step: 57200
+INFO - train_dpdm_base.py - 2025-03-18 10:26:41,817 - Loss: 0.2299, step: 57300
+INFO - train_dpdm_base.py - 2025-03-18 10:27:21,350 - Eps-value after 239 epochs: 8.7313
+INFO - train_dpdm_base.py - 2025-03-18 10:27:47,674 - Loss: 0.2257, step: 57400
+INFO - train_dpdm_base.py - 2025-03-18 10:28:53,950 - Loss: 0.2273, step: 57500
+INFO - train_dpdm_base.py - 2025-03-18 10:30:00,672 - Loss: 0.2408, step: 57600
+INFO - train_dpdm_base.py - 2025-03-18 10:30:00,890 - Eps-value after 240 epochs: 8.7527
+INFO - train_dpdm_base.py - 2025-03-18 10:31:07,070 - Loss: 0.2236, step: 57700
+INFO - train_dpdm_base.py - 2025-03-18 10:32:12,464 - Loss: 0.2272, step: 57800
+INFO - train_dpdm_base.py - 2025-03-18 10:32:39,168 - Eps-value after 241 epochs: 8.7741
+INFO - train_dpdm_base.py - 2025-03-18 10:33:18,259 - Loss: 0.2127, step: 57900
+INFO - train_dpdm_base.py - 2025-03-18 10:34:23,705 - Loss: 0.2358, step: 58000
+INFO - train_dpdm_base.py - 2025-03-18 10:34:23,722 - Saving snapshot checkpoint and sampling single batch at iteration 58000.
+WARNING - image.py - 2025-03-18 10:34:24,425 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 10:35:17,117 - Eps-value after 242 epochs: 8.7956
+INFO - train_dpdm_base.py - 2025-03-18 10:35:30,258 - Loss: 0.2269, step: 58100
+INFO - train_dpdm_base.py - 2025-03-18 10:36:35,619 - Loss: 0.2201, step: 58200
+INFO - train_dpdm_base.py - 2025-03-18 10:37:41,298 - Loss: 0.2281, step: 58300
+INFO - train_dpdm_base.py - 2025-03-18 10:37:54,589 - Eps-value after 243 epochs: 8.8170
+INFO - train_dpdm_base.py - 2025-03-18 10:38:47,226 - Loss: 0.2342, step: 58400
+INFO - train_dpdm_base.py - 2025-03-18 10:39:52,339 - Loss: 0.2376, step: 58500
+INFO - train_dpdm_base.py - 2025-03-18 10:40:32,169 - Eps-value after 244 epochs: 8.8384
+INFO - train_dpdm_base.py - 2025-03-18 10:40:57,690 - Loss: 0.2265, step: 58600
+INFO - train_dpdm_base.py - 2025-03-18 10:42:04,231 - Loss: 0.2149, step: 58700
+INFO - train_dpdm_base.py - 2025-03-18 10:43:10,157 - Loss: 0.2137, step: 58800
+INFO - train_dpdm_base.py - 2025-03-18 10:43:10,178 - Eps-value after 245 epochs: 8.8598
+INFO - train_dpdm_base.py - 2025-03-18 10:44:16,318 - Loss: 0.2127, step: 58900
+INFO - train_dpdm_base.py - 2025-03-18 10:45:22,141 - Loss: 0.2168, step: 59000
+INFO - train_dpdm_base.py - 2025-03-18 10:45:22,274 - Saving snapshot checkpoint and sampling single batch at iteration 59000.
+WARNING - image.py - 2025-03-18 10:45:23,015 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 10:45:48,999 - Eps-value after 246 epochs: 8.8813
+INFO - train_dpdm_base.py - 2025-03-18 10:46:28,897 - Loss: 0.2231, step: 59100
+INFO - train_dpdm_base.py - 2025-03-18 10:47:34,935 - Loss: 0.2251, step: 59200
+INFO - train_dpdm_base.py - 2025-03-18 10:48:27,366 - Eps-value after 247 epochs: 8.9027
+INFO - train_dpdm_base.py - 2025-03-18 10:48:40,156 - Loss: 0.2322, step: 59300
+INFO - train_dpdm_base.py - 2025-03-18 10:49:46,141 - Loss: 0.2362, step: 59400
+INFO - train_dpdm_base.py - 2025-03-18 10:50:52,053 - Loss: 0.2302, step: 59500
+INFO - train_dpdm_base.py - 2025-03-18 10:51:05,314 - Eps-value after 248 epochs: 8.9241
+INFO - train_dpdm_base.py - 2025-03-18 10:51:57,314 - Loss: 0.2448, step: 59600
+INFO - train_dpdm_base.py - 2025-03-18 10:53:03,015 - Loss: 0.2280, step: 59700
+INFO - train_dpdm_base.py - 2025-03-18 10:53:42,151 - Eps-value after 249 epochs: 8.9456
+INFO - train_dpdm_base.py - 2025-03-18 10:54:08,358 - Loss: 0.2211, step: 59800
+INFO - train_dpdm_base.py - 2025-03-18 10:55:14,352 - Loss: 0.2264, step: 59900
+INFO - train_dpdm_base.py - 2025-03-18 10:56:20,995 - Loss: 0.2242, step: 60000
+INFO - train_dpdm_base.py - 2025-03-18 10:56:21,020 - Eps-value after 250 epochs: 8.9670
+INFO - train_dpdm_base.py - 2025-03-18 10:56:21,046 - Saving snapshot checkpoint and sampling single batch at iteration 60000.
+WARNING - image.py - 2025-03-18 10:56:21,782 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 10:56:48,091 - FID 0 at iteration 60000: 22.479118
+INFO - train_dpdm_base.py - 2025-03-18 10:57:53,960 - Loss: 0.2169, step: 60100
+INFO - train_dpdm_base.py - 2025-03-18 10:58:59,634 - Loss: 0.2046, step: 60200
+INFO - train_dpdm_base.py - 2025-03-18 10:59:25,712 - Eps-value after 251 epochs: 8.9884
+INFO - train_dpdm_base.py - 2025-03-18 11:00:04,826 - Loss: 0.2241, step: 60300
+INFO - train_dpdm_base.py - 2025-03-18 11:01:10,953 - Loss: 0.2358, step: 60400
+INFO - train_dpdm_base.py - 2025-03-18 11:02:03,509 - Eps-value after 252 epochs: 9.0098
+INFO - train_dpdm_base.py - 2025-03-18 11:02:16,733 - Loss: 0.2175, step: 60500
+INFO - train_dpdm_base.py - 2025-03-18 11:03:22,581 - Loss: 0.2309, step: 60600
+INFO - train_dpdm_base.py - 2025-03-18 11:04:27,874 - Loss: 0.2140, step: 60700
+INFO - train_dpdm_base.py - 2025-03-18 11:04:40,856 - Eps-value after 253 epochs: 9.0313
+INFO - train_dpdm_base.py - 2025-03-18 11:05:33,649 - Loss: 0.2292, step: 60800
+INFO - train_dpdm_base.py - 2025-03-18 11:06:38,776 - Loss: 0.2345, step: 60900
+INFO - train_dpdm_base.py - 2025-03-18 11:07:18,151 - Eps-value after 254 epochs: 9.0527
+INFO - train_dpdm_base.py - 2025-03-18 11:07:44,649 - Loss: 0.2108, step: 61000
+INFO - train_dpdm_base.py - 2025-03-18 11:07:44,692 - Saving snapshot checkpoint and sampling single batch at iteration 61000.
+WARNING - image.py - 2025-03-18 11:07:45,399 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 11:08:52,073 - Loss: 0.2186, step: 61100
+INFO - train_dpdm_base.py - 2025-03-18 11:09:58,217 - Loss: 0.2149, step: 61200
+INFO - train_dpdm_base.py - 2025-03-18 11:09:58,243 - Eps-value after 255 epochs: 9.0737
+INFO - train_dpdm_base.py - 2025-03-18 11:11:03,694 - Loss: 0.2245, step: 61300
+INFO - train_dpdm_base.py - 2025-03-18 11:12:09,739 - Loss: 0.2104, step: 61400
+INFO - train_dpdm_base.py - 2025-03-18 11:12:36,397 - Eps-value after 256 epochs: 9.0945
+INFO - train_dpdm_base.py - 2025-03-18 11:13:16,187 - Loss: 0.2202, step: 61500
+INFO - train_dpdm_base.py - 2025-03-18 11:14:21,944 - Loss: 0.2186, step: 61600
+INFO - train_dpdm_base.py - 2025-03-18 11:15:14,144 - Eps-value after 257 epochs: 9.1154
+INFO - train_dpdm_base.py - 2025-03-18 11:15:27,037 - Loss: 0.2149, step: 61700
+INFO - train_dpdm_base.py - 2025-03-18 11:16:32,722 - Loss: 0.2273, step: 61800
+INFO - train_dpdm_base.py - 2025-03-18 11:17:39,316 - Loss: 0.2045, step: 61900
+INFO - train_dpdm_base.py - 2025-03-18 11:17:52,732 - Eps-value after 258 epochs: 9.1362
+INFO - train_dpdm_base.py - 2025-03-18 11:18:44,494 - Loss: 0.2312, step: 62000
+INFO - train_dpdm_base.py - 2025-03-18 11:18:44,505 - Saving snapshot checkpoint and sampling single batch at iteration 62000.
+WARNING - image.py - 2025-03-18 11:18:45,215 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 11:19:51,526 - Loss: 0.2206, step: 62100
+INFO - train_dpdm_base.py - 2025-03-18 11:20:31,345 - Eps-value after 259 epochs: 9.1570
+INFO - train_dpdm_base.py - 2025-03-18 11:20:57,717 - Loss: 0.2238, step: 62200
+INFO - train_dpdm_base.py - 2025-03-18 11:22:03,613 - Loss: 0.2144, step: 62300
+INFO - train_dpdm_base.py - 2025-03-18 11:23:09,461 - Loss: 0.2323, step: 62400
+INFO - train_dpdm_base.py - 2025-03-18 11:23:09,481 - Eps-value after 260 epochs: 9.1778
+INFO - train_dpdm_base.py - 2025-03-18 11:24:15,262 - Loss: 0.2331, step: 62500
+INFO - train_dpdm_base.py - 2025-03-18 11:25:20,720 - Loss: 0.2083, step: 62600
+INFO - train_dpdm_base.py - 2025-03-18 11:25:47,426 - Eps-value after 261 epochs: 9.1986
+INFO - train_dpdm_base.py - 2025-03-18 11:26:26,840 - Loss: 0.2121, step: 62700
+INFO - train_dpdm_base.py - 2025-03-18 11:27:32,444 - Loss: 0.2160, step: 62800
+INFO - train_dpdm_base.py - 2025-03-18 11:28:24,679 - Eps-value after 262 epochs: 9.2194
+INFO - train_dpdm_base.py - 2025-03-18 11:28:37,751 - Loss: 0.2244, step: 62900
+INFO - train_dpdm_base.py - 2025-03-18 11:29:43,334 - Loss: 0.2034, step: 63000
+INFO - train_dpdm_base.py - 2025-03-18 11:29:43,513 - Saving snapshot checkpoint and sampling single batch at iteration 63000.
+WARNING - image.py - 2025-03-18 11:29:44,233 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 11:30:51,491 - Loss: 0.2043, step: 63100
+INFO - train_dpdm_base.py - 2025-03-18 11:31:05,141 - Eps-value after 263 epochs: 9.2402
+INFO - train_dpdm_base.py - 2025-03-18 11:31:57,037 - Loss: 0.2219, step: 63200
+INFO - train_dpdm_base.py - 2025-03-18 11:33:02,213 - Loss: 0.2375, step: 63300
+INFO - train_dpdm_base.py - 2025-03-18 11:33:42,398 - Eps-value after 264 epochs: 9.2610
+INFO - train_dpdm_base.py - 2025-03-18 11:34:08,092 - Loss: 0.2091, step: 63400
+INFO - train_dpdm_base.py - 2025-03-18 11:35:14,216 - Loss: 0.2459, step: 63500
+INFO - train_dpdm_base.py - 2025-03-18 11:36:20,086 - Loss: 0.2155, step: 63600
+INFO - train_dpdm_base.py - 2025-03-18 11:36:20,105 - Eps-value after 265 epochs: 9.2818
+INFO - train_dpdm_base.py - 2025-03-18 11:37:25,079 - Loss: 0.2152, step: 63700
+INFO - train_dpdm_base.py - 2025-03-18 11:38:30,975 - Loss: 0.2257, step: 63800
+INFO - train_dpdm_base.py - 2025-03-18 11:38:56,772 - Eps-value after 266 epochs: 9.3026
+INFO - train_dpdm_base.py - 2025-03-18 11:39:36,530 - Loss: 0.2517, step: 63900
+INFO - train_dpdm_base.py - 2025-03-18 11:40:41,449 - Loss: 0.2033, step: 64000
+INFO - train_dpdm_base.py - 2025-03-18 11:40:41,733 - Saving snapshot checkpoint and sampling single batch at iteration 64000.
+WARNING - image.py - 2025-03-18 11:40:42,442 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 11:41:34,811 - Eps-value after 267 epochs: 9.3234
+INFO - train_dpdm_base.py - 2025-03-18 11:41:47,802 - Loss: 0.2013, step: 64100
+INFO - train_dpdm_base.py - 2025-03-18 11:42:53,468 - Loss: 0.2322, step: 64200
+INFO - train_dpdm_base.py - 2025-03-18 11:43:59,033 - Loss: 0.2165, step: 64300
+INFO - train_dpdm_base.py - 2025-03-18 11:44:11,840 - Eps-value after 268 epochs: 9.3442
+INFO - train_dpdm_base.py - 2025-03-18 11:45:04,399 - Loss: 0.2147, step: 64400
+INFO - train_dpdm_base.py - 2025-03-18 11:46:10,041 - Loss: 0.2145, step: 64500
+INFO - train_dpdm_base.py - 2025-03-18 11:46:49,415 - Eps-value after 269 epochs: 9.3651
+INFO - train_dpdm_base.py - 2025-03-18 11:47:15,442 - Loss: 0.2278, step: 64600
+INFO - train_dpdm_base.py - 2025-03-18 11:48:21,135 - Loss: 0.2431, step: 64700
+INFO - train_dpdm_base.py - 2025-03-18 11:49:27,083 - Loss: 0.2132, step: 64800
+INFO - train_dpdm_base.py - 2025-03-18 11:49:27,104 - Eps-value after 270 epochs: 9.3859
+INFO - train_dpdm_base.py - 2025-03-18 11:50:32,792 - Loss: 0.2042, step: 64900
+INFO - train_dpdm_base.py - 2025-03-18 11:51:37,520 - Loss: 0.2190, step: 65000
+INFO - train_dpdm_base.py - 2025-03-18 11:51:37,563 - Saving snapshot checkpoint and sampling single batch at iteration 65000.
+WARNING - image.py - 2025-03-18 11:51:38,273 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 11:52:04,254 - Eps-value after 271 epochs: 9.4067
+INFO - train_dpdm_base.py - 2025-03-18 11:52:43,937 - Loss: 0.2291, step: 65100
+INFO - train_dpdm_base.py - 2025-03-18 11:53:50,325 - Loss: 0.2221, step: 65200
+INFO - train_dpdm_base.py - 2025-03-18 11:54:43,955 - Eps-value after 272 epochs: 9.4275
+INFO - train_dpdm_base.py - 2025-03-18 11:54:56,686 - Loss: 0.2310, step: 65300
+INFO - train_dpdm_base.py - 2025-03-18 11:56:02,411 - Loss: 0.2426, step: 65400
+INFO - train_dpdm_base.py - 2025-03-18 11:57:08,247 - Loss: 0.2494, step: 65500
+INFO - train_dpdm_base.py - 2025-03-18 11:57:21,390 - Eps-value after 273 epochs: 9.4483
+INFO - train_dpdm_base.py - 2025-03-18 11:58:14,523 - Loss: 0.2104, step: 65600
+INFO - train_dpdm_base.py - 2025-03-18 11:59:20,522 - Loss: 0.2086, step: 65700
+INFO - train_dpdm_base.py - 2025-03-18 11:59:59,681 - Eps-value after 274 epochs: 9.4691
+INFO - train_dpdm_base.py - 2025-03-18 12:00:25,774 - Loss: 0.2140, step: 65800
+INFO - train_dpdm_base.py - 2025-03-18 12:01:31,817 - Loss: 0.2177, step: 65900
+INFO - train_dpdm_base.py - 2025-03-18 12:02:36,658 - Loss: 0.2302, step: 66000
+INFO - train_dpdm_base.py - 2025-03-18 12:02:36,684 - Eps-value after 275 epochs: 9.4899
+INFO - train_dpdm_base.py - 2025-03-18 12:02:36,705 - Saving snapshot checkpoint and sampling single batch at iteration 66000.
+WARNING - image.py - 2025-03-18 12:02:37,435 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 12:03:43,021 - Loss: 0.2179, step: 66100
+INFO - train_dpdm_base.py - 2025-03-18 12:04:48,548 - Loss: 0.2029, step: 66200
+INFO - train_dpdm_base.py - 2025-03-18 12:05:15,190 - Eps-value after 276 epochs: 9.5107
+INFO - train_dpdm_base.py - 2025-03-18 12:05:54,698 - Loss: 0.2053, step: 66300
+INFO - train_dpdm_base.py - 2025-03-18 12:07:00,425 - Loss: 0.2085, step: 66400
+INFO - train_dpdm_base.py - 2025-03-18 12:07:52,503 - Eps-value after 277 epochs: 9.5315
+INFO - train_dpdm_base.py - 2025-03-18 12:08:05,794 - Loss: 0.2416, step: 66500
+INFO - train_dpdm_base.py - 2025-03-18 12:09:11,073 - Loss: 0.2250, step: 66600
+INFO - train_dpdm_base.py - 2025-03-18 12:10:17,543 - Loss: 0.2289, step: 66700
+INFO - train_dpdm_base.py - 2025-03-18 12:10:30,736 - Eps-value after 278 epochs: 9.5517
+INFO - train_dpdm_base.py - 2025-03-18 12:11:22,553 - Loss: 0.2056, step: 66800
+INFO - train_dpdm_base.py - 2025-03-18 12:12:28,586 - Loss: 0.2348, step: 66900
+INFO - train_dpdm_base.py - 2025-03-18 12:13:07,947 - Eps-value after 279 epochs: 9.5719
+INFO - train_dpdm_base.py - 2025-03-18 12:13:34,423 - Loss: 0.2135, step: 67000
+INFO - train_dpdm_base.py - 2025-03-18 12:13:34,478 - Saving snapshot checkpoint and sampling single batch at iteration 67000.
+WARNING - image.py - 2025-03-18 12:13:35,206 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 12:14:40,387 - Loss: 0.2200, step: 67100
+INFO - train_dpdm_base.py - 2025-03-18 12:15:46,022 - Loss: 0.2410, step: 67200
+INFO - train_dpdm_base.py - 2025-03-18 12:15:46,047 - Eps-value after 280 epochs: 9.5921
+INFO - train_dpdm_base.py - 2025-03-18 12:16:51,450 - Loss: 0.2209, step: 67300
+INFO - train_dpdm_base.py - 2025-03-18 12:17:57,388 - Loss: 0.2286, step: 67400
+INFO - train_dpdm_base.py - 2025-03-18 12:18:23,739 - Eps-value after 281 epochs: 9.6123
+INFO - train_dpdm_base.py - 2025-03-18 12:19:03,402 - Loss: 0.2129, step: 67500
+INFO - train_dpdm_base.py - 2025-03-18 12:20:08,801 - Loss: 0.2327, step: 67600
+INFO - train_dpdm_base.py - 2025-03-18 12:21:00,902 - Eps-value after 282 epochs: 9.6325
+INFO - train_dpdm_base.py - 2025-03-18 12:21:14,216 - Loss: 0.2108, step: 67700
+INFO - train_dpdm_base.py - 2025-03-18 12:22:19,168 - Loss: 0.2130, step: 67800
+INFO - train_dpdm_base.py - 2025-03-18 12:23:24,437 - Loss: 0.2164, step: 67900
+INFO - train_dpdm_base.py - 2025-03-18 12:23:37,686 - Eps-value after 283 epochs: 9.6527
+INFO - train_dpdm_base.py - 2025-03-18 12:24:29,970 - Loss: 0.2302, step: 68000
+INFO - train_dpdm_base.py - 2025-03-18 12:24:29,980 - Saving snapshot checkpoint and sampling single batch at iteration 68000.
+WARNING - image.py - 2025-03-18 12:24:30,708 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 12:25:36,017 - Loss: 0.2060, step: 68100
+INFO - train_dpdm_base.py - 2025-03-18 12:26:14,943 - Eps-value after 284 epochs: 9.6729
+INFO - train_dpdm_base.py - 2025-03-18 12:26:41,122 - Loss: 0.2157, step: 68200
+INFO - train_dpdm_base.py - 2025-03-18 12:27:46,874 - Loss: 0.2131, step: 68300
+INFO - train_dpdm_base.py - 2025-03-18 12:28:52,054 - Loss: 0.2348, step: 68400
+INFO - train_dpdm_base.py - 2025-03-18 12:28:52,098 - Eps-value after 285 epochs: 9.6930
+INFO - train_dpdm_base.py - 2025-03-18 12:29:58,851 - Loss: 0.2105, step: 68500
+INFO - train_dpdm_base.py - 2025-03-18 12:31:04,336 - Loss: 0.2329, step: 68600
+INFO - train_dpdm_base.py - 2025-03-18 12:31:30,179 - Eps-value after 286 epochs: 9.7132
+INFO - train_dpdm_base.py - 2025-03-18 12:32:09,787 - Loss: 0.2270, step: 68700
+INFO - train_dpdm_base.py - 2025-03-18 12:33:15,556 - Loss: 0.2257, step: 68800
+INFO - train_dpdm_base.py - 2025-03-18 12:34:08,473 - Eps-value after 287 epochs: 9.7334
+INFO - train_dpdm_base.py - 2025-03-18 12:34:21,623 - Loss: 0.2141, step: 68900
+INFO - train_dpdm_base.py - 2025-03-18 12:35:26,785 - Loss: 0.2227, step: 69000
+INFO - train_dpdm_base.py - 2025-03-18 12:35:26,791 - Saving snapshot checkpoint and sampling single batch at iteration 69000.
+WARNING - image.py - 2025-03-18 12:35:27,516 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 12:36:32,621 - Loss: 0.2271, step: 69100
+INFO - train_dpdm_base.py - 2025-03-18 12:36:45,674 - Eps-value after 288 epochs: 9.7536
+INFO - train_dpdm_base.py - 2025-03-18 12:37:38,557 - Loss: 0.2290, step: 69200
+INFO - train_dpdm_base.py - 2025-03-18 12:38:44,776 - Loss: 0.2166, step: 69300
+INFO - train_dpdm_base.py - 2025-03-18 12:39:23,597 - Eps-value after 289 epochs: 9.7738
+INFO - train_dpdm_base.py - 2025-03-18 12:39:49,727 - Loss: 0.1979, step: 69400
+INFO - train_dpdm_base.py - 2025-03-18 12:40:55,334 - Loss: 0.2336, step: 69500
+INFO - train_dpdm_base.py - 2025-03-18 12:42:00,666 - Loss: 0.2237, step: 69600
+INFO - train_dpdm_base.py - 2025-03-18 12:42:00,691 - Eps-value after 290 epochs: 9.7940
+INFO - train_dpdm_base.py - 2025-03-18 12:43:07,090 - Loss: 0.2152, step: 69700
+INFO - train_dpdm_base.py - 2025-03-18 12:44:13,100 - Loss: 0.2294, step: 69800
+INFO - train_dpdm_base.py - 2025-03-18 12:44:39,227 - Eps-value after 291 epochs: 9.8142
+INFO - train_dpdm_base.py - 2025-03-18 12:45:18,829 - Loss: 0.2251, step: 69900
+INFO - train_dpdm_base.py - 2025-03-18 12:46:24,332 - Loss: 0.2196, step: 70000
+INFO - train_dpdm_base.py - 2025-03-18 12:46:24,347 - Saving snapshot checkpoint and sampling single batch at iteration 70000.
+WARNING - image.py - 2025-03-18 12:46:25,065 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 12:46:51,241 - FID 0 at iteration 70000: 21.653489
+INFO - train_dpdm_base.py - 2025-03-18 12:47:43,443 - Eps-value after 292 epochs: 9.8344
+INFO - train_dpdm_base.py - 2025-03-18 12:47:56,393 - Loss: 0.2212, step: 70100
+INFO - train_dpdm_base.py - 2025-03-18 12:49:02,049 - Loss: 0.2308, step: 70200
+INFO - train_dpdm_base.py - 2025-03-18 12:50:07,628 - Loss: 0.2187, step: 70300
+INFO - train_dpdm_base.py - 2025-03-18 12:50:20,959 - Eps-value after 293 epochs: 9.8546
+INFO - train_dpdm_base.py - 2025-03-18 12:51:16,505 - Loss: 0.2191, step: 70400
+INFO - train_dpdm_base.py - 2025-03-18 12:52:21,581 - Loss: 0.2118, step: 70500
+INFO - train_dpdm_base.py - 2025-03-18 12:53:01,087 - Eps-value after 294 epochs: 9.8748
+INFO - train_dpdm_base.py - 2025-03-18 12:53:27,221 - Loss: 0.2358, step: 70600
+INFO - train_dpdm_base.py - 2025-03-18 12:54:32,981 - Loss: 0.2220, step: 70700
+INFO - train_dpdm_base.py - 2025-03-18 12:55:39,081 - Loss: 0.2103, step: 70800
+INFO - train_dpdm_base.py - 2025-03-18 12:55:39,106 - Eps-value after 295 epochs: 9.8950
+INFO - train_dpdm_base.py - 2025-03-18 12:56:44,685 - Loss: 0.2239, step: 70900
+INFO - train_dpdm_base.py - 2025-03-18 12:57:50,406 - Loss: 0.2222, step: 71000
+INFO - train_dpdm_base.py - 2025-03-18 12:57:50,653 - Saving snapshot checkpoint and sampling single batch at iteration 71000.
+WARNING - image.py - 2025-03-18 12:57:51,362 - Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO - train_dpdm_base.py - 2025-03-18 12:58:18,252 - Eps-value after 296 epochs: 9.9151
+INFO - train_dpdm_base.py - 2025-03-18 12:58:57,901 - Loss: 0.2162, step: 71100
+INFO - train_dpdm_base.py - 2025-03-18 13:00:03,107 - Loss: 0.2124, step: 71200
+INFO - train_dpdm_base.py - 2025-03-18 13:00:55,755 - Eps-value after 297 epochs: 9.9353
+INFO - train_dpdm_base.py - 2025-03-18 13:01:08,678 - Loss: 0.2175, step: 71300
+INFO - train_dpdm_base.py - 2025-03-18 13:02:14,095 - Loss: 0.2343, step: 71400
+INFO - train_dpdm_base.py - 2025-03-18 13:03:19,968 - Loss: 0.2389, step: 71500
+INFO - train_dpdm_base.py - 2025-03-18 13:03:33,730 - Eps-value after 298 epochs: 9.9555
+INFO - train_dpdm_base.py - 2025-03-18 13:04:25,964 - Loss: 0.2320, step: 71600
+INFO - train_dpdm_base.py - 2025-03-18 13:05:30,855 - Loss: 0.2391, step: 71700
+INFO - train_dpdm_base.py - 2025-03-18 13:06:09,785 - Eps-value after 299 epochs: 9.9757
+INFO - train_dpdm_base.py - 2025-03-18 13:06:36,089 - Loss: 0.2212, step: 71800
+INFO - train_dpdm_base.py - 2025-03-18 13:07:42,086 - Loss: 0.2165, step: 71900
+INFO - train_dpdm_base.py - 2025-03-18 13:08:47,247 - Loss: 0.2121, step: 72000
+INFO - train_dpdm_base.py - 2025-03-18 13:08:47,268 - Eps-value after 300 epochs: 9.9959
+INFO - train_dpdm_base.py - 2025-03-18 13:08:47,354 - Saving final checkpoint.
+INFO - train_dpdm_base.py - 2025-03-18 13:09:14,928 - Final FID 1: 21.187781
